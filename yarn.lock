@@ -3401,6 +3401,25 @@
   resolved "https://registry.yarnpkg.com/@tamagui/timer/-/timer-1.102.3.tgz#9c30c1c975e6f67d9b8553ded68934f5d09c076e"
   integrity sha512-Vh0kSdY0rD3nahLKucLKgU1GIl69EKByVAzpG//evcyKaWawzsA7WSLB4F8FukftXRSa/IvcaKTKVK0BMs8XUg==
 
+"@tamagui/toast@^1.102.3":
+  version "1.102.3"
+  resolved "https://registry.yarnpkg.com/@tamagui/toast/-/toast-1.102.3.tgz#7f74af9539125d08c8aa72b455c716b9116234f0"
+  integrity sha512-vVrWVmA3PWr0j5GZ/b4uOXW4lJnV+2nj0ZNfx2zB+yf1y8eq3YI1CjhmfGOSXZghl5PQirPKK3gUQ07nMRw/sw==
+  dependencies:
+    "@tamagui/animate-presence" "1.102.3"
+    "@tamagui/compose-refs" "1.102.3"
+    "@tamagui/constants" "1.102.3"
+    "@tamagui/core" "1.102.3"
+    "@tamagui/create-context" "1.102.3"
+    "@tamagui/dismissable" "1.102.3"
+    "@tamagui/helpers" "1.102.3"
+    "@tamagui/polyfill-dev" "1.102.3"
+    "@tamagui/portal" "1.102.3"
+    "@tamagui/stacks" "1.102.3"
+    "@tamagui/text" "1.102.3"
+    "@tamagui/use-controllable-state" "1.102.3"
+    "@tamagui/visually-hidden" "1.102.3"
+
 "@tamagui/toggle-group@1.102.3":
   version "1.102.3"
   resolved "https://registry.yarnpkg.com/@tamagui/toggle-group/-/toggle-group-1.102.3.tgz#bcbb942c290d9038ae417ae104f447e49edf654f"
@@ -4539,6 +4558,14 @@ builtins@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
   integrity sha512-uYBjakWipfaO/bXI7E8rq6kpwHRZK5cNYrUv2OzZSI/FvmdMyXJ2tG9dKcjEC5YHmHpUAwsargWIZNWdxb/bnQ==
+
+burnt@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/burnt/-/burnt-0.12.2.tgz#827dfb8fe2b5844d52060d9aa61dd9a683902d52"
+  integrity sha512-bbZjGN4Om7dykr8ZcLb0tTO5L2becMR+HIez1ySUGgG/rvK+ePgBEuBA6lMOZqOTsUXhIKFUBH0sCXQ25fq5SA==
+  dependencies:
+    sf-symbols-typescript "^1.0.0"
+    sonner "^0.3.5"
 
 bytes@3.0.0:
   version "3.0.0"
@@ -10049,6 +10076,11 @@ setprototypeof@1.2.0:
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
   integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
 
+sf-symbols-typescript@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/sf-symbols-typescript/-/sf-symbols-typescript-1.0.0.tgz#94e9210bf27e7583f9749a0d07bd4f4937ea488f"
+  integrity sha512-DkS7q3nN68dEMb4E18HFPDAvyrjDZK9YAQQF2QxeFu9gp2xRDXFMF8qLJ1EmQ/qeEGQmop4lmMM1WtYJTIcCMw==
+
 shallow-clone@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/shallow-clone/-/shallow-clone-3.0.1.tgz#8f2981ad92531f55035b01fb230769a40e02efa3"
@@ -10184,6 +10216,11 @@ slugify@^1.3.4, slugify@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.6.tgz#2d4ac0eacb47add6af9e04d3be79319cbcc7924b"
   integrity sha512-h+z7HKHYXj6wJU+AnS/+IH8Uh9fdcX1Lrhg1/VMdf9PwoBQXFcXiAdsy2tSK0P6gKwJLXp02r90ahUCqHk9rrw==
+
+sonner@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/sonner/-/sonner-0.3.5.tgz#5ef175732cb7b637c6460620ab01a0fba0e6a36b"
+  integrity sha512-yIwaQ4dftMvFApuruto2t7wGyyaPRpj5qYBWYJIz4Z7uGcVn0IfqI/hWN0JyJN4izNbZFuCYZISf3fOGnvSlNQ==
 
 source-map-js@^1.2.0:
   version "1.2.0"

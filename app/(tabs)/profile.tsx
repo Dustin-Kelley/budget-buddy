@@ -1,15 +1,15 @@
-import { View, Text } from 'react-native'
 import React from 'react'
-import { YStack } from 'tamagui'
-
+import { SafeAreaView } from 'react-native'
+import { YStack, Text } from 'tamagui'
 
 
 const Profile = () => {
   return (
-    <YStack>
+    <SafeAreaView>
+    <YStack paddingHorizontal="$4">
       <Text>profile</Text>
-    
     </YStack>
+    </SafeAreaView>
   )
 }
 

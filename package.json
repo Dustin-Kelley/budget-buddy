@@ -24,6 +24,8 @@
     "@tamagui/babel-plugin": "^1.102.3",
     "@tamagui/config": "^1.102.3",
     "@tamagui/metro-plugin": "^1.102.3",
+    "@tamagui/toast": "^1.102.3",
+    "burnt": "^0.12.2",
     "expo": "~51.0.16",
     "expo-constants": "~16.0.2",
     "expo-dev-client": "~4.0.19",
