@@ -1,12 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const coolSettings = () => {
+
+
+const Profile = () => {
   return (
     <View>
-      <Text>coolSettings I am</Text>
+      <Text>profile</Text>
+    
     </View>
   )
 }
 
-export default coolSettings
+export default Profile

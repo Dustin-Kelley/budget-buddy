@@ -25,7 +25,7 @@ export default function TabLayout() {
       />
         
       <Tabs.Screen
-        name="explore"
+        name="transactions"
         options={{
           title: 'Transactions',
           tabBarIcon: ({ color, focused }) => (
@@ -34,7 +34,7 @@ export default function TabLayout() {
         }}
       />
        <Tabs.Screen
-        name="settings"
+        name="profile"
         options={{
           title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
