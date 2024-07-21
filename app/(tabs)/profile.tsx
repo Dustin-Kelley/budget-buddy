@@ -1,14 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { YStack } from 'tamagui'
 
 
 
 const Profile = () => {
   return (
-    <View>
+    <YStack>
       <Text>profile</Text>
     
-    </View>
+    </YStack>
   )
 }
 
