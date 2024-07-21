@@ -7,7 +7,7 @@ import 'react-native-reanimated';
 import { useColorScheme } from 'react-native'
 import { TamaguiProvider } from 'tamagui'
 
-import  config  from '../design-components/tamagui.config';
+import  config  from '../tamagui.config';
 
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.

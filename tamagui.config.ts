@@ -1,14 +1,14 @@
 import { createTamagui } from 'tamagui';
-import { animations } from './animations';
+import { animations } from './design-components/animations';
 import {
   bodyFont,
   digitalFont,
   headingFont,
   palmerLakeFont,
   staatlichesFont,
-} from './fonts';
-import { themes } from './themes';
-import { tokens } from './tokens';
+} from './design-components/fonts';
+import { themes } from './design-components/themes';
+import { tokens } from './design-components/tokens';
 
 const config = createTamagui({
   animations,
