@@ -6,7 +6,7 @@ import { YStack, Text } from 'tamagui'
 const Profile = () => {
   return (
     <SafeAreaView>
-    <YStack paddingHorizontal="$4">
+    <YStack paddingHorizontal="$md">
       <Text>profile</Text>
     </YStack>
     </SafeAreaView>
