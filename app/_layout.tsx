@@ -48,11 +48,11 @@ export default function RootLayout() {
     
     <TamaguiProvider config={config} defaultTheme={colorScheme!}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        {/* {session ? <Account session={session} /> : <Auth />} */}
-        <Stack>
+        {session ?  <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-        </Stack>
+        </Stack> : <Auth />}
+       
       </ThemeProvider>
     </TamaguiProvider>
   );
