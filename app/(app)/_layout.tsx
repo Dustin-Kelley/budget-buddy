@@ -8,23 +8,22 @@ import {
   import * as SplashScreen from 'expo-splash-screen';
   import 'react-native-reanimated';
   import { useColorScheme } from 'react-native';
-  import { TamaguiProvider } from 'tamagui';
+  import { TamaguiProvider, Spinner } from 'tamagui';
   import config from '@/tamagui.config';
   import { useEffect } from 'react';
   import { useAuth, AuthProvider } from '@/providers/AuthProvider';
+  
   
   // Prevent the splash screen from auto-hiding before asset loading is complete.
   SplashScreen.preventAutoHideAsync();
   
   export default function RootLayout() {
-    const { session } = useAuth();
+    const { session, isLoading } = useAuth();
     const colorScheme = useColorScheme();
     const [loaded] = useFonts({
       SpaceMono: require('@/assets/fonts/SpaceMono-Regular.ttf'),
     });
-  
-    console.log('session', session);
-  
+    
     useEffect(() => {
       if (loaded) {
         SplashScreen.hideAsync();
@@ -34,6 +33,10 @@ import {
     if (!loaded) {
       return null;
     }
+
+    if (isLoading) {
+        return <Spinner />;
+      }
   
     if (!session) {
       // On web, static rendering will stop here as the user is not authenticated
@@ -49,8 +52,6 @@ import {
           >
             <Stack>
               <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-              <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-              <Stack.Screen name="(auth)" options={{ headerShown: false }} />
             </Stack>
           </ThemeProvider>
         </AuthProvider>

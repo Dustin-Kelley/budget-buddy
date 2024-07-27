@@ -11,20 +11,20 @@ import {
 type AuthData = {
   session: Session | null;
   profile: any;
-  loading: boolean;
+  isLoading: boolean;
 
 };
 
 const AuthContext = createContext<AuthData>({
   session: null,
-  loading: true,
+  isLoading: true,
   profile: null,
 });
 
 export function AuthProvider({ children }: PropsWithChildren) {
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
 
   useEffect(() => {
@@ -43,10 +43,9 @@ export function AuthProvider({ children }: PropsWithChildren) {
           .eq('id', session.user.id)
           .single();
         setProfile(data || null);
-        console.log('data', data)
       }
 
-      setLoading(false);
+      setIsLoading(false);
     };
 
     fetchSession();
@@ -60,7 +59,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
   return (
     <AuthContext.Provider
-      value={{ session, loading, profile, }}
+      value={{ session, isLoading, profile, }}
     >
       {children}
     </AuthContext.Provider>
