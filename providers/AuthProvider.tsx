@@ -21,7 +21,7 @@ const AuthContext = createContext<AuthData>({
   profile: null,
 });
 
-export default function AuthProvider({ children }: PropsWithChildren) {
+export function AuthProvider({ children }: PropsWithChildren) {
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -60,7 +60,7 @@ export default function AuthProvider({ children }: PropsWithChildren) {
 
   return (
     <AuthContext.Provider
-      value={{ session, loading, profile,  }}
+      value={{ session, loading, profile, }}
     >
       {children}
     </AuthContext.Provider>
