@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Alert, StyleSheet, View, AppState, Button } from 'react-native'
 import { supabase } from '@/lib/supabase'
 import { Input } from 'tamagui'
-import { router } from 'expo-router'
+import { Link, router } from 'expo-router'
 
 
 
@@ -60,7 +60,7 @@ export default function Auth() {
         <Button title="Sign in" disabled={loading} onPress={() => {signInWithEmail();   router.replace('/');}} />
       </View>
       <View style={styles.verticallySpaced}>
-        <Button title="Sign up" disabled={loading} onPress={() => signUpWithEmail()} />
+        <Link href={'/sign-up'}  disabled={loading}>Sign up</Link>
       </View>
     </View>
   )
