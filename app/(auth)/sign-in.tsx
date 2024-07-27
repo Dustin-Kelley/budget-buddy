@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Alert, StyleSheet, View, AppState, Button } from 'react-native'
-import { supabase } from '../lib/supabase'
+import { supabase } from '@/lib/supabase'
 import { Input } from 'tamagui'
 
 // Tells Supabase Auth to continuously refresh the session automatically if
