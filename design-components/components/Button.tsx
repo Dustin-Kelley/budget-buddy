@@ -12,9 +12,9 @@ const ButtonContext = createStyledContext<{
 const ButtonFrame = styled(View, {
   alignItems: 'center',
   animation: 'fast',
-  backgroundColor: '$evergreen8',
-  borderColor: '$evergreen8',
-  borderRadius: '$lg',
+  backgroundColor: '$purple2',
+  borderColor: '$purple2',
+  borderRadius: '$xl',
   borderWidth: 1,
   context: ButtonContext,
   defaultVariants: {
@@ -25,10 +25,10 @@ const ButtonFrame = styled(View, {
   flexDirection: 'row',
   flexShrink: 1,
   gap: '$xxs',
-  hoverStyle: { backgroundColor: '$evergreen7' },
+  hoverStyle: { backgroundColor: '$purple3' },
   name: 'Button',
-  paddingVertical: '$xs',
-  pressStyle: { backgroundColor: '$evergreen9' },
+  paddingVertical: '$sm',
+  pressStyle: { backgroundColor: '$purple1' },
   variants: {
     size: {
       '...size': (name, { tokens }) => {
