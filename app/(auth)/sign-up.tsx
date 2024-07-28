@@ -1,4 +1,4 @@
-import { TextInput, StyleSheet, Alert, SafeAreaView } from 'react-native';
+import { TextInput, StyleSheet, Alert } from 'react-native';
 import { useState } from 'react';
 import { YStack, Text } from 'tamagui';
 import { Link } from 'expo-router';
@@ -21,38 +21,50 @@ const SignUpScreen = () => {
   }
 
   return (
-    <YStack paddingTop={insets.top} flexGrow={1} paddingHorizontal="$md">
-      <YStack>
-        <Text>Sign Up</Text>
-        <Text>Please sign up to continue using the app</Text>
+    <YStack
+      gap="$md"
+      paddingTop={insets.top}
+      flexGrow={1}
+      paddingHorizontal="$md"
+      justifyContent="space-between"
+    >
+      <YStack gap="$lg">
+        <YStack gap="$xs">
+          <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple2'}>
+            Sign Up
+          </Text>
+          <Text>Please sign up to continue using the app</Text>
+        </YStack>
+
+        <YStack>
+          <Text style={styles.label}>Email</Text>
+          <TextInput
+            value={email}
+            onChangeText={setEmail}
+            placeholder="jon@gmail.com"
+            style={styles.input}
+          />
+
+          <Text style={styles.label}>Password</Text>
+          <TextInput
+            value={password}
+            onChangeText={setPassword}
+            placeholder=""
+            style={styles.input}
+            secureTextEntry
+          />
+        </YStack>
       </YStack>
-
-      <YStack>
-      <Text style={styles.label}>Email</Text>
-      <TextInput
-        value={email}
-        onChangeText={setEmail}
-        placeholder="jon@gmail.com"
-        style={styles.input}
-      />
-
-      <Text style={styles.label}>Password</Text>
-      <TextInput
-        value={password}
-        onChangeText={setPassword}
-        placeholder=""
-        style={styles.input}
-        secureTextEntry
-      />
+      <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
+        <Button variant="primary" onPress={signUpWithEmail} disabled={loading}>
+          <Button.Text fontSize={'$h4'}>
+            {loading ? 'Signing up...' : 'Sign Up'}
+          </Button.Text>
+        </Button>
+        <Link href="/sign-in">
+          Already have an account? <Text color={'$purple2'}>Sign in</Text>
+        </Link>
       </YStack>
-
-      <Button variant='primary' onPress={signUpWithEmail} disabled={loading}>
-        <Button.Text fontSize={"$h4"}> {loading ? 'Signing up...' : 'Sign Up'}</Button.Text>
-       
-      </Button>
-      <Link href="/sign-in" style={styles.textButton}>
-        Sign in
-      </Link>
     </YStack>
   );
 };
@@ -69,11 +81,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: 'white',
     borderRadius: 5,
-  },
-  textButton: {
-    alignSelf: 'center',
-    fontWeight: 'bold',
-    marginVertical: 10,
   },
 });
 
