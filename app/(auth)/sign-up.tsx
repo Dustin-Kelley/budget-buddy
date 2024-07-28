@@ -1,13 +1,16 @@
-import { View, Text, TextInput, StyleSheet, Alert } from 'react-native';
-import React, { useState } from 'react';
-import { Button } from 'tamagui';
-import { Link, Stack } from 'expo-router';
+import { TextInput, StyleSheet, Alert, SafeAreaView } from 'react-native';
+import { useState } from 'react';
+import { YStack, Text } from 'tamagui';
+import { Link } from 'expo-router';
 import { supabase } from '@/lib/supabase';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Button } from '@/design-components/components/Button';
 
 const SignUpScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const insets = useSafeAreaInsets();
 
   async function signUpWithEmail() {
     setLoading(true);
@@ -18,9 +21,13 @@ const SignUpScreen = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <Stack.Screen options={{ title: 'Sign up' }} />
+    <YStack paddingTop={insets.top} flexGrow={1} paddingHorizontal="$md">
+      <YStack>
+        <Text>Sign Up</Text>
+        <Text>Please sign up to continue using the app</Text>
+      </YStack>
 
+      <YStack>
       <Text style={styles.label}>Email</Text>
       <TextInput
         value={email}
@@ -37,25 +44,20 @@ const SignUpScreen = () => {
         style={styles.input}
         secureTextEntry
       />
+      </YStack>
 
-      <Button
-        onPress={signUpWithEmail}
-        disabled={loading}
-     
-      >   {loading ? 'Creating account...' : 'Create account'}</Button>
+      <Button variant='primary' onPress={signUpWithEmail} disabled={loading}>
+        <Button.Text fontSize={"$h4"}> {loading ? 'Signing up...' : 'Sign Up'}</Button.Text>
+       
+      </Button>
       <Link href="/sign-in" style={styles.textButton}>
         Sign in
       </Link>
-    </View>
+    </YStack>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    justifyContent: 'center',
-    flex: 1,
-  },
   label: {
     color: 'gray',
   },

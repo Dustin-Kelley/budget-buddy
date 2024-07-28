@@ -128,9 +128,20 @@ const black = {
   black9: 'hsla(0, 0%, 0%, 0.44)',
 };
 
+const purple = {
+  purple1: 'hsl(270, 100%, 95%)',
+  purple2: 'hsl(270, 100%, 75%)',
+  purple3: 'hsl(270, 100%, 50%)',
+  purple4: 'hsl(270, 100%, 25%)',
+  purple5: 'hsl(270, 100%, 10%)',
+  purple6: 'hsl(270, 100%, 5%)',
+  purple7: 'hsl(270, 100%, 0%)',
+}
+
 export const color = {
   ...amber,
   ...black,
+  ...purple,
   ...blue,
   ...evergreen,
   ...gray,
