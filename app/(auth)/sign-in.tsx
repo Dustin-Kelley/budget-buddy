@@ -50,7 +50,7 @@ export default function Auth() {
     >
       <YStack gap="$lg">
         <YStack gap="$xs">
-          <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple2'}>
+          <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple1'}>
             Sign In
           </Text>
           <Text>Please sign in to continue using the app</Text>

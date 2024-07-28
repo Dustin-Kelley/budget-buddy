@@ -30,7 +30,7 @@ const SignUpScreen = () => {
     >
       <YStack gap="$lg">
         <YStack gap="$xs">
-          <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple2'}>
+          <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple1'}>
             Sign Up
           </Text>
           <Text>Please sign up to continue using the app</Text>

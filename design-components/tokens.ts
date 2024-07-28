@@ -129,13 +129,12 @@ const black = {
 };
 
 const purple = {
-  purple1: 'hsl(270, 100%, 95%)',
-  purple2: 'hsl(270, 100%, 75%)',
-  purple3: 'hsl(270, 100%, 50%)',
-  purple4: 'hsl(270, 100%, 25%)',
-  purple5: 'hsl(270, 100%, 10%)',
-  purple6: 'hsl(270, 100%, 5%)',
-  purple7: 'hsl(270, 100%, 0%)',
+  purple: 'hsl(237, 83%, 100%)',
+  purple1: 'hsl(237, 83%, 70%)',
+  purple2: 'hsl(237, 83%, 60%)',
+  purple3: 'hsl(237, 83%, 50%)',
+  purple4: 'hsl(237, 83%, 25%)',
+  purple5: 'hsl(237, 83%, 10%)',
 }
 
 export const color = {
