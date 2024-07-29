@@ -1,8 +1,6 @@
 import { StyleSheet, Alert } from 'react-native';
-import { useState } from 'react';
-import { YStack, Text, Input } from 'tamagui';
+import { YStack, Text } from 'tamagui';
 import { Link, router } from 'expo-router';
-import { supabase } from '@/lib/supabase';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button } from '@/design-components/components/Button';
 import { useForm, Controller } from 'react-hook-form';
@@ -13,7 +11,7 @@ type FormData = {
   email: string;
   password: string;
 };
-const SignUpScreen = () => {
+export default function SignUpScreen()  {
   const insets = useSafeAreaInsets();
   const { isSignUpPending, signUp } = useSignUp();
   const {
@@ -95,7 +93,3 @@ const SignUpScreen = () => {
     </YStack>
   );
 };
-
-
-
-export default SignUpScreen;
