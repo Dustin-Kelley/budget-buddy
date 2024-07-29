@@ -1,11 +1,12 @@
 import { StyleSheet, Alert } from 'react-native';
 import { useState } from 'react';
 import { YStack, Text, Input } from 'tamagui';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 import { supabase } from '@/lib/supabase';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button } from '@/design-components/components/Button';
 import { useForm, Controller } from 'react-hook-form';
+import { useSignUp } from '@/queries/AuthQueries';
 
 type FormData = {
   email: string;
@@ -13,8 +14,7 @@ type FormData = {
 };
 const SignUpScreen = () => {
   const insets = useSafeAreaInsets();
-  const [loading, setLoading] = useState(false);
-
+const {isSignUpPending, signUp} = useSignUp();
   const {
     control,
     handleSubmit,
@@ -25,12 +25,9 @@ const SignUpScreen = () => {
       password: '',
     },
   });
-  const signUp = handleSubmit(async ({ email, password }) => {
-    setLoading(true);
-    const { error } = await supabase.auth.signUp({ email, password });
-
-    if (error) Alert.alert(error.message);
-    setLoading(false);
+  const onSubmit = handleSubmit(async ({ email, password }) => {
+   signUp({email, password})
+   router.replace('/');
   });
 
   return (
@@ -89,7 +86,7 @@ const SignUpScreen = () => {
         </YStack>
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
-        <Button variant="primary" onPress={signUp}>
+        <Button variant="primary" onPress={onSubmit}>
           <Button.Text fontSize={'$h4'}>Sign up</Button.Text>
         </Button>
         <Link href="/sign-in">
