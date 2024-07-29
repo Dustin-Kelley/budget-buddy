@@ -1,4 +1,4 @@
-import { TextInput, StyleSheet, Alert } from 'react-native';
+import { StyleSheet, Alert } from 'react-native';
 import { useState } from 'react';
 import { YStack, Text, Input } from 'tamagui';
 import { Link } from 'expo-router';

@@ -55,7 +55,7 @@ export default function SignIn() {
         </YStack>
 
         <YStack>
-          <Text style={styles.label}>Email</Text>
+          <Text>Email</Text>
           <Controller
             control={control}
             rules={{
@@ -73,7 +73,7 @@ export default function SignIn() {
           />
           {errors.email && <Text color="$red">This is required.</Text>}
 
-          <Text style={styles.label}>Password</Text>
+          <Text>Password</Text>
           <Controller
             control={control}
             rules={{
@@ -107,28 +107,10 @@ export default function SignIn() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 40,
-    padding: 12,
-  },
   input: {
     borderWidth: 1,
     borderColor: 'gray',
-    padding: 10,
-    marginTop: 5,
-    marginBottom: 20,
     backgroundColor: 'white',
     borderRadius: 5,
-  },
-  verticallySpaced: {
-    paddingTop: 4,
-    paddingBottom: 4,
-    alignSelf: 'stretch',
-  },
-  label: {
-    color: 'gray',
-  },
-  mt20: {
-    marginTop: 20,
   },
 });
