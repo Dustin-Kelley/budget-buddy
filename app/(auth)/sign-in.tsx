@@ -1,44 +1,42 @@
-import React, { useState } from 'react'
-import { Alert, StyleSheet, TextInput } from 'react-native'
-import { supabase } from '@/lib/supabase'
-import { Input, YStack, Text } from 'tamagui'
-import { Link, router } from 'expo-router'
-import { Button } from '@/design-components/components/Button'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import React, { useState } from 'react';
+import { Alert, StyleSheet, TextInput } from 'react-native';
+import { supabase } from '@/lib/supabase';
+import { Input, YStack, Text } from 'tamagui';
+import { Link, router } from 'expo-router';
+import { Button } from '@/design-components/components/Button';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Controller, useForm } from 'react-hook-form';
 
+type FormData = {
+  email: string;
+  password: string;
+};
 
-
-export default function Auth() {
+export default function SignIn() {
   const insets = useSafeAreaInsets();
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
-  async function signInWithEmail() {
-    setLoading(true)
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
+
+  const signIn = handleSubmit(async ({ email, password }) => {
+    setLoading(true);
     const { error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
-    })
+    });
 
-    if (error) Alert.alert(error.message)
-    setLoading(false)
-  }
-
-  async function signUpWithEmail() {
-    setLoading(true)
-    const {
-      data: { session },
-      error,
-    } = await supabase.auth.signUp({
-      email: email,
-      password: password,
-    })
-
-    if (error) Alert.alert(error.message)
-    if (!session) Alert.alert('Please check your inbox for email verification!')
-    setLoading(false)
-  }
+    if (error) Alert.alert(error.message);
+    setLoading(false);
+  });
 
   return (
     <YStack
@@ -58,25 +56,44 @@ export default function Auth() {
 
         <YStack>
           <Text style={styles.label}>Email</Text>
-          <TextInput
-            value={email}
-            onChangeText={setEmail}
-            placeholder="jon@gmail.com"
-            style={styles.input}
+          <Controller
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                onChangeText={onChange}
+                value={value}
+                style={styles.input}
+                color={'black'}
+              />
+            )}
+            name="email"
           />
+          {errors.email && <Text color="$red">This is required.</Text>}
 
           <Text style={styles.label}>Password</Text>
-          <TextInput
-            value={password}
-            onChangeText={setPassword}
-            placeholder=""
-            style={styles.input}
-            secureTextEntry
+          <Controller
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                onChangeText={onChange}
+                value={value}
+                style={styles.input}
+                color={'black'}
+              />
+            )}
+            name="password"
           />
+          {errors.password && <Text color="$red">This is required.</Text>}
         </YStack>
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
-        <Button variant="primary" onPress={signUpWithEmail} disabled={loading}>
+        <Button variant="primary" onPress={signIn} disabled={loading}>
           <Button.Text fontSize={'$h4'}>
             {loading ? 'Signing in...' : 'Sign In'}
           </Button.Text>
@@ -86,7 +103,7 @@ export default function Auth() {
         </Link>
       </YStack>
     </YStack>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -114,4 +131,4 @@ const styles = StyleSheet.create({
   mt20: {
     marginTop: 20,
   },
-})
+});

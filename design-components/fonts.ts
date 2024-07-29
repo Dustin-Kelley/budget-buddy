@@ -53,31 +53,6 @@ export const headingFont = createFont({
   },
 });
 
-export const staatlichesFont = createFont({
-  face: {
-    300: { normal: 'Staatliches_400Regular' },
-    400: { normal: 'Staatliches_400Regular' },
-  },
-  family: 'Staatliches_400Regular, Helvetica, Arial, sans-serif',
-  size,
-  weight: {
-    300: '300',
-    400: '400',
-  },
-});
-
-export const palmerLakeFont = createFont({
-  face: {
-    300: { normal: 'PalmerLakeRegular' },
-    400: { normal: 'PalmerLakeRegular' },
-  },
-  family: 'PalmerLakeRegular, Helvetica, Arial, sans-serif',
-  size,
-  weight: {
-    300: '300',
-    400: '400',
-  },
-});
 
 export const digitalFont = createFont({
   face: {

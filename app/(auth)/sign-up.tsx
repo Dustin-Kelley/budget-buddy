@@ -1,24 +1,37 @@
 import { TextInput, StyleSheet, Alert } from 'react-native';
 import { useState } from 'react';
-import { YStack, Text } from 'tamagui';
+import { YStack, Text, Input } from 'tamagui';
 import { Link } from 'expo-router';
 import { supabase } from '@/lib/supabase';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button } from '@/design-components/components/Button';
+import { useForm, Controller } from 'react-hook-form';
 
+type FormData = {
+  email: string;
+  password: string;
+};
 const SignUpScreen = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
   const insets = useSafeAreaInsets();
+  const [loading, setLoading] = useState(false);
 
-  async function signUpWithEmail() {
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
+  const signUp = handleSubmit(async ({ email, password }) => {
     setLoading(true);
     const { error } = await supabase.auth.signUp({ email, password });
 
     if (error) Alert.alert(error.message);
     setLoading(false);
-  }
+  });
 
   return (
     <YStack
@@ -38,28 +51,46 @@ const SignUpScreen = () => {
 
         <YStack>
           <Text style={styles.label}>Email</Text>
-          <TextInput
-            value={email}
-            onChangeText={setEmail}
-            placeholder="jon@gmail.com"
-            style={styles.input}
+          <Controller
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                onChangeText={onChange}
+                value={value}
+                placeholder="jon@gmail.com"
+                style={styles.input}
+                color={'black'}
+              />
+            )}
+            name="email"
           />
+          {errors.email && <Text color="$red">This is required.</Text>}
 
           <Text style={styles.label}>Password</Text>
-          <TextInput
-            value={password}
-            onChangeText={setPassword}
-            placeholder=""
-            style={styles.input}
-            secureTextEntry
+          <Controller
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                placeholder="Password"
+                onChangeText={onChange}
+                value={value}
+                style={styles.input}
+              />
+            )}
+            name="password"
           />
+          {errors.password && <Text color="$red">This is required.</Text>}
         </YStack>
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
-        <Button variant="primary" onPress={signUpWithEmail} disabled={loading}>
-          <Button.Text fontSize={'$h4'}>
-            {loading ? 'Signing up...' : 'Sign Up'}
-          </Button.Text>
+        <Button variant="primary" onPress={signUp}>
+          <Button.Text fontSize={'$h4'}>Sign up</Button.Text>
         </Button>
         <Link href="/sign-in">
           Already have an account? <Text color={'$purple2'}>Sign in</Text>
@@ -76,11 +107,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: 'gray',
-    padding: 10,
-    marginTop: 5,
-    marginBottom: 20,
     backgroundColor: 'white',
-    borderRadius: 5,
   },
 });
 
