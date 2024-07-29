@@ -6,6 +6,7 @@ import { Link, router } from 'expo-router';
 import { Button } from '@/design-components/components/Button';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Controller, useForm } from 'react-hook-form';
+import { useSignIn } from '@/queries/AuthQueries';
 
 type FormData = {
   email: string;
@@ -14,7 +15,8 @@ type FormData = {
 
 export default function SignIn() {
   const insets = useSafeAreaInsets();
-  const [loading, setLoading] = useState(false);
+const {signIn, isSignInPending} = useSignIn();
+
 
   const {
     control,
@@ -27,15 +29,9 @@ export default function SignIn() {
     },
   });
 
-  const signIn = handleSubmit(async ({ email, password }) => {
-    setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({
-      email: email,
-      password: password,
-    });
-
-    if (error) Alert.alert(error.message);
-    setLoading(false);
+  const onSubmit = handleSubmit(async ({ email, password }) => {
+    signIn({email, password})
+    router.replace('/');
   });
 
   return (
@@ -93,9 +89,9 @@ export default function SignIn() {
         </YStack>
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
-        <Button variant="primary" onPress={signIn} disabled={loading}>
+        <Button variant="primary" onPress={onSubmit} disabled={isSignInPending}>
           <Button.Text fontSize={'$h4'}>
-            {loading ? 'Signing in...' : 'Sign In'}
+            {isSignInPending ? 'Signing in...' : 'Sign In'}
           </Button.Text>
         </Button>
         <Link href="/sign-up">

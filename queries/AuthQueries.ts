@@ -20,3 +20,19 @@ import { useMutation, useQuery } from '@tanstack/react-query';
     signUp: mutate
     };
   }
+
+  export function useSignIn() {
+    const { isPending, mutate } = useMutation({
+      mutationFn: async ({ email, password }: { email: string, password: string }) => {
+        await AuthService.signIn({ email, password });
+      },
+      onSuccess: () => {
+        console.log('success', 'signed in');
+      },
+    });
+  
+    return {
+    isSignInPending: isPending,
+    signIn: mutate
+    };
+  }

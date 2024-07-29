@@ -86,8 +86,8 @@ const {isSignUpPending, signUp} = useSignUp();
         </YStack>
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
-        <Button variant="primary" onPress={onSubmit}>
-          <Button.Text fontSize={'$h4'}>Sign up</Button.Text>
+        <Button variant="primary" onPress={onSubmit} disabled={isSignUpPending}>
+          <Button.Text fontSize={'$h4'}>{isSignUpPending ? 'Signing Up...' : 'Sign Up'}</Button.Text>
         </Button>
         <Link href="/sign-in">
           Already have an account? <Text color={'$purple2'}>Sign in</Text>
