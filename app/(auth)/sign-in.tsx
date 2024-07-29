@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Alert, StyleSheet, TextInput } from 'react-native';
+import { Alert, StyleSheet } from 'react-native';
 import { supabase } from '@/lib/supabase';
 import { Input, YStack, Text } from 'tamagui';
 import { Link, router } from 'expo-router';
@@ -7,6 +7,7 @@ import { Button } from '@/design-components/components/Button';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Controller, useForm } from 'react-hook-form';
 import { useSignIn } from '@/queries/AuthQueries';
+import { TextInput } from '@/design-components/components/TextInput';
 
 type FormData = {
   email: string;
@@ -15,8 +16,7 @@ type FormData = {
 
 export default function SignIn() {
   const insets = useSafeAreaInsets();
-const {signIn, isSignInPending} = useSignIn();
-
+  const { signIn, isSignInPending } = useSignIn();
 
   const {
     control,
@@ -30,7 +30,7 @@ const {signIn, isSignInPending} = useSignIn();
   });
 
   const onSubmit = handleSubmit(async ({ email, password }) => {
-    signIn({email, password})
+    signIn({ email, password });
     router.replace('/');
   });
 
@@ -50,38 +50,27 @@ const {signIn, isSignInPending} = useSignIn();
           <Text>Please sign in to continue using the app</Text>
         </YStack>
 
-        <YStack>
-          <Text>Email</Text>
+        <YStack gap="$xs">
           <Controller
             control={control}
             rules={{
               required: true,
             }}
             render={({ field: { onChange, value } }) => (
-              <Input
-                onChangeText={onChange}
-                value={value}
-                style={styles.input}
-                color={'black'}
-              />
+              <TextInput onChangeText={onChange} value={value} label="Email" />
             )}
             name="email"
           />
           {errors.email && <Text color="$red">This is required.</Text>}
 
-          <Text>Password</Text>
+     
           <Controller
             control={control}
             rules={{
               required: true,
             }}
             render={({ field: { onChange, value } }) => (
-              <Input
-                onChangeText={onChange}
-                value={value}
-                style={styles.input}
-                color={'black'}
-              />
+              <TextInput label="Password" onChangeText={onChange} value={value} />
             )}
             name="password"
           />

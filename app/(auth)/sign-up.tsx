@@ -7,6 +7,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button } from '@/design-components/components/Button';
 import { useForm, Controller } from 'react-hook-form';
 import { useSignUp } from '@/queries/AuthQueries';
+import { TextInput } from '@/design-components/components/TextInput';
 
 type FormData = {
   email: string;
@@ -14,7 +15,7 @@ type FormData = {
 };
 const SignUpScreen = () => {
   const insets = useSafeAreaInsets();
-const {isSignUpPending, signUp} = useSignUp();
+  const { isSignUpPending, signUp } = useSignUp();
   const {
     control,
     handleSubmit,
@@ -26,8 +27,8 @@ const {isSignUpPending, signUp} = useSignUp();
     },
   });
   const onSubmit = handleSubmit(async ({ email, password }) => {
-   signUp({email, password})
-   router.replace('/');
+    signUp({ email, password });
+    router.replace('/');
   });
 
   return (
@@ -46,38 +47,34 @@ const {isSignUpPending, signUp} = useSignUp();
           <Text>Please sign up to continue using the app</Text>
         </YStack>
 
-        <YStack>
-          <Text style={styles.label}>Email</Text>
+        <YStack gap="$xs">
           <Controller
             control={control}
             rules={{
               required: true,
             }}
             render={({ field: { onChange, value } }) => (
-              <Input
+              <TextInput
                 onChangeText={onChange}
                 value={value}
                 placeholder="jon@gmail.com"
-                style={styles.input}
-                color={'black'}
+                label="Email"
               />
             )}
             name="email"
           />
           {errors.email && <Text color="$red">This is required.</Text>}
 
-          <Text style={styles.label}>Password</Text>
           <Controller
             control={control}
             rules={{
               required: true,
             }}
             render={({ field: { onChange, value } }) => (
-              <Input
-                placeholder="Password"
+              <TextInput
                 onChangeText={onChange}
                 value={value}
-                style={styles.input}
+                label="Password"
               />
             )}
             name="password"
@@ -87,7 +84,9 @@ const {isSignUpPending, signUp} = useSignUp();
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
         <Button variant="primary" onPress={onSubmit} disabled={isSignUpPending}>
-          <Button.Text fontSize={'$h4'}>{isSignUpPending ? 'Signing Up...' : 'Sign Up'}</Button.Text>
+          <Button.Text fontSize={'$h4'}>
+            {isSignUpPending ? 'Signing Up...' : 'Sign Up'}
+          </Button.Text>
         </Button>
         <Link href="/sign-in">
           Already have an account? <Text color={'$purple2'}>Sign in</Text>
@@ -97,15 +96,6 @@ const {isSignUpPending, signUp} = useSignUp();
   );
 };
 
-const styles = StyleSheet.create({
-  label: {
-    color: 'gray',
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: 'gray',
-    backgroundColor: 'white',
-  },
-});
+
 
 export default SignUpScreen;

@@ -8,8 +8,7 @@ import { Redirect, Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
 import { useColorScheme } from 'react-native';
-import { TamaguiProvider, Spinner } from 'tamagui';
-import config from '@/tamagui.config';
+import { Spinner } from 'tamagui';
 import { useEffect } from 'react';
 import { useAuth, AuthProvider } from '@/providers/AuthProvider';
 
