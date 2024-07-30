@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Alert, StyleSheet } from 'react-native';
-import { supabase } from '@/lib/supabase';
-import { Input, YStack, Text } from 'tamagui';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { YStack, Text, Image } from 'tamagui';
 import { Link, router } from 'expo-router';
 import { Button } from '@/design-components/components/Button';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -37,7 +36,7 @@ export default function SignIn() {
   return (
     <YStack
       gap="$md"
-      paddingTop={insets.top}
+      paddingTop={insets.top + 10}
       flexGrow={1}
       paddingHorizontal="$md"
       justifyContent="space-between"
@@ -45,9 +44,16 @@ export default function SignIn() {
       <YStack gap="$lg">
         <YStack gap="$xs">
           <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple1'}>
-            Sign In
+            Login Now
           </Text>
           <Text>Please sign in to continue using the app</Text>
+          <Image
+            source={{
+              uri: 'https://goovhuczwuncnkumdbuo.supabase.co/storage/v1/object/public/images/set-different-living-room-interior-flat-style.png',
+              width: 380,
+              height: 300,
+            }}
+          />
         </YStack>
 
         <YStack gap="$xs">
@@ -80,11 +86,11 @@ export default function SignIn() {
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
         <Button variant="primary" onPress={onSubmit} disabled={isSignInPending}>
           <Button.Text fontSize={'$h4'}>
-            {isSignInPending ? 'Signing in...' : 'Sign In'}
+            {isSignInPending ? 'Logging in...' : 'Login'}
           </Button.Text>
         </Button>
         <Link href="/sign-up">
-          Already have an account? <Text color={'$purple2'}>Sign Up</Text>
+          Don't have an account? <Text color={'$purple2'}>Sign Up</Text>
         </Link>
       </YStack>
     </YStack>

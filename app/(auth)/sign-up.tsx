@@ -1,5 +1,4 @@
-import { StyleSheet, Alert } from 'react-native';
-import { YStack, Text } from 'tamagui';
+import { YStack, Text, Image  } from 'tamagui';
 import { Link, router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button } from '@/design-components/components/Button';
@@ -11,7 +10,7 @@ type FormData = {
   email: string;
   password: string;
 };
-export default function SignUpScreen()  {
+export default function SignUpScreen() {
   const insets = useSafeAreaInsets();
   const { isSignUpPending, signUp } = useSignUp();
   const {
@@ -31,20 +30,27 @@ export default function SignUpScreen()  {
 
   return (
     <YStack
-      gap="$md"
-      paddingTop={insets.top}
+      gap="$xl"
+      paddingTop={insets.top + 10}
       flexGrow={1}
       paddingHorizontal="$md"
       justifyContent="space-between"
     >
-      <YStack gap="$lg">
+      <YStack gap="$xl">
         <YStack gap="$xs">
           <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple1'}>
             Sign Up
           </Text>
           <Text>Please sign up to continue using the app</Text>
+          <Image
+            source={{
+              uri: 'https://goovhuczwuncnkumdbuo.supabase.co/storage/v1/object/public/images/set-different-living-room-interior-flat-style.png',
+              width: 380,
+              height: 300,
+            }}
+          />
         </YStack>
-
+       
         <YStack gap="$xs">
           <Controller
             control={control}
@@ -87,9 +93,9 @@ export default function SignUpScreen()  {
           </Button.Text>
         </Button>
         <Link href="/sign-in">
-          Already have an account? <Text color={'$purple2'}>Sign in</Text>
+          Already have an account? <Text color={'$purple2'}>Login</Text>
         </Link>
       </YStack>
     </YStack>
   );
-};
+}

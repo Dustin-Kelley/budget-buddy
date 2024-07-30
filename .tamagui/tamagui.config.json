@@ -26776,162 +26776,6 @@
           "xxs": "300",
           "xxxl": "300"
         }
-      },
-      "palmerLake": {
-        "face": {
-          "100": {
-            "normal": "PalmerLakeRegular, Helvetica, Arial, sans-serif"
-          },
-          "200": {
-            "normal": "PalmerLakeRegular, Helvetica, Arial, sans-serif"
-          },
-          "300": {
-            "normal": "PalmerLakeRegular"
-          },
-          "400": {
-            "normal": "PalmerLakeRegular"
-          },
-          "500": {
-            "normal": "PalmerLakeRegular"
-          },
-          "600": {
-            "normal": "PalmerLakeRegular"
-          },
-          "700": {
-            "normal": "PalmerLakeRegular"
-          },
-          "800": {
-            "normal": "PalmerLakeRegular"
-          },
-          "900": {
-            "normal": "PalmerLakeRegular"
-          }
-        },
-        "family": "PalmerLakeRegular, Helvetica, Arial, sans-serif",
-        "size": {
-          "1": 12,
-          "2": 14,
-          "3": 16,
-          "4": 18,
-          "base": 16,
-          "h1": 44,
-          "h2": 32,
-          "h3": 24,
-          "h4": 20,
-          "h5": 16,
-          "h6": 14,
-          "lg": 18,
-          "md": 16,
-          "sm": 14,
-          "xl": 20,
-          "xml": 48,
-          "xs": 12,
-          "xxl": 24,
-          "xxs": 10,
-          "xxxl": 30
-        },
-        "weight": {
-          "1": "300",
-          "2": "300",
-          "3": "300",
-          "4": "300",
-          "300": "300",
-          "400": "400",
-          "base": "300",
-          "h1": "300",
-          "h2": "300",
-          "h3": "300",
-          "h4": "300",
-          "h5": "300",
-          "h6": "300",
-          "lg": "300",
-          "md": "300",
-          "sm": "300",
-          "xl": "300",
-          "xml": "300",
-          "xs": "300",
-          "xxl": "300",
-          "xxs": "300",
-          "xxxl": "300"
-        }
-      },
-      "staatliches": {
-        "face": {
-          "100": {
-            "normal": "Staatliches_400Regular, Helvetica, Arial, sans-serif"
-          },
-          "200": {
-            "normal": "Staatliches_400Regular, Helvetica, Arial, sans-serif"
-          },
-          "300": {
-            "normal": "Staatliches_400Regular"
-          },
-          "400": {
-            "normal": "Staatliches_400Regular"
-          },
-          "500": {
-            "normal": "Staatliches_400Regular"
-          },
-          "600": {
-            "normal": "Staatliches_400Regular"
-          },
-          "700": {
-            "normal": "Staatliches_400Regular"
-          },
-          "800": {
-            "normal": "Staatliches_400Regular"
-          },
-          "900": {
-            "normal": "Staatliches_400Regular"
-          }
-        },
-        "family": "Staatliches_400Regular, Helvetica, Arial, sans-serif",
-        "size": {
-          "1": 12,
-          "2": 14,
-          "3": 16,
-          "4": 18,
-          "base": 16,
-          "h1": 44,
-          "h2": 32,
-          "h3": 24,
-          "h4": 20,
-          "h5": 16,
-          "h6": 14,
-          "lg": 18,
-          "md": 16,
-          "sm": 14,
-          "xl": 20,
-          "xml": 48,
-          "xs": 12,
-          "xxl": 24,
-          "xxs": 10,
-          "xxxl": 30
-        },
-        "weight": {
-          "1": "300",
-          "2": "300",
-          "3": "300",
-          "4": "300",
-          "300": "300",
-          "400": "400",
-          "base": "300",
-          "h1": "300",
-          "h2": "300",
-          "h3": "300",
-          "h4": "300",
-          "h5": "300",
-          "h6": "300",
-          "lg": "300",
-          "md": "300",
-          "sm": "300",
-          "xl": "300",
-          "xml": "300",
-          "xs": "300",
-          "xxl": "300",
-          "xxs": "300",
-          "xxxl": "300"
-        }
       }
     },
     "onlyAllowShorthands": false,
@@ -27194,563 +27038,605 @@
           "val": "hsla(0, 0%, 0%, 0.44)",
           "variable": ""
         },
+        "purple": {
+          "isVar": true,
+          "key": "$purple",
+          "name": "color-27",
+          "val": "hsl(237, 83%, 100%)",
+          "variable": ""
+        },
+        "purple1": {
+          "isVar": true,
+          "key": "$purple1",
+          "name": "color-28",
+          "val": "hsl(237, 83%, 70%)",
+          "variable": ""
+        },
+        "purple2": {
+          "isVar": true,
+          "key": "$purple2",
+          "name": "color-29",
+          "val": "hsl(237, 83%, 60%)",
+          "variable": ""
+        },
+        "purple3": {
+          "isVar": true,
+          "key": "$purple3",
+          "name": "color-30",
+          "val": "hsl(237, 83%, 50%)",
+          "variable": ""
+        },
+        "purple4": {
+          "isVar": true,
+          "key": "$purple4",
+          "name": "color-31",
+          "val": "hsl(237, 83%, 25%)",
+          "variable": ""
+        },
+        "purple5": {
+          "isVar": true,
+          "key": "$purple5",
+          "name": "color-32",
+          "val": "hsl(237, 83%, 10%)",
+          "variable": ""
+        },
         "blue": {
           "isVar": true,
           "key": "$blue",
-          "name": "color-27",
+          "name": "color-33",
           "val": "hsla(206, 100%, 50%, 1)",
           "variable": ""
         },
         "blue1": {
           "isVar": true,
           "key": "$blue1",
-          "name": "color-28",
+          "name": "color-34",
           "val": "hsla(210, 100%, 99%, 1)",
           "variable": ""
         },
         "blue10": {
           "isVar": true,
           "key": "$blue10",
-          "name": "color-29",
+          "name": "color-35",
           "val": "hsla(211, 100%, 43%, 1)",
           "variable": ""
         },
         "blue11": {
           "isVar": true,
           "key": "$blue11",
-          "name": "color-30",
+          "name": "color-36",
           "val": "hsla(211, 100%, 29%, 1)",
           "variable": ""
         },
         "blue12": {
           "isVar": true,
           "key": "$blue12",
-          "name": "color-31",
+          "name": "color-37",
           "val": "hsla(211, 100%, 15%, 1)",
           "variable": ""
         },
         "blue2": {
           "isVar": true,
           "key": "$blue2",
-          "name": "color-32",
+          "name": "color-38",
           "val": "hsla(210, 100%, 98%, 1)",
           "variable": ""
         },
         "blue3": {
           "isVar": true,
           "key": "$blue3",
-          "name": "color-33",
+          "name": "color-39",
           "val": "hsla(210, 100%, 94%, 1)",
           "variable": ""
         },
         "blue4": {
           "isVar": true,
           "key": "$blue4",
-          "name": "color-34",
+          "name": "color-40",
           "val": "hsla(209, 96%, 90%, 1)",
           "variable": ""
         },
         "blue5": {
           "isVar": true,
           "key": "$blue5",
-          "name": "color-35",
+          "name": "color-41",
           "val": "hsla(209, 82%, 85%, 1)",
           "variable": ""
         },
         "blue6": {
           "isVar": true,
           "key": "$blue6",
-          "name": "color-36",
+          "name": "color-42",
           "val": "hsla(208, 78%, 77%, 1)",
           "variable": ""
         },
         "blue7": {
           "isVar": true,
           "key": "$blue7",
-          "name": "color-37",
+          "name": "color-43",
           "val": "hsla(206, 82%, 65%, 1)",
           "variable": ""
         },
         "blue8": {
           "isVar": true,
           "key": "$blue8",
-          "name": "color-38",
+          "name": "color-44",
           "val": "hsla(206, 100%, 50%, 1)",
           "variable": ""
         },
         "blue9": {
           "isVar": true,
           "key": "$blue9",
-          "name": "color-39",
+          "name": "color-45",
           "val": "hsla(208, 100%, 47%, 1)",
           "variable": ""
         },
         "evergreen": {
           "isVar": true,
           "key": "$evergreen",
-          "name": "color-40",
+          "name": "color-46",
           "val": "hsla(146, 41%, 28%, 1)",
           "variable": ""
         },
         "evergreen1": {
           "isVar": true,
           "key": "$evergreen1",
-          "name": "color-41",
+          "name": "color-47",
           "val": "hsla(147, 28%, 96%, 1)",
           "variable": ""
         },
         "evergreen10": {
           "isVar": true,
           "key": "$evergreen10",
-          "name": "color-42",
+          "name": "color-48",
           "val": "hsla(146, 54%, 21%, 1)",
           "variable": ""
         },
         "evergreen11": {
           "isVar": true,
           "key": "$evergreen11",
-          "name": "color-43",
+          "name": "color-49",
           "val": "hsla(148, 39%, 16%, 1)",
           "variable": ""
         },
         "evergreen12": {
           "isVar": true,
           "key": "$evergreen12",
-          "name": "color-44",
+          "name": "color-50",
           "val": "hsla(151, 64%, 8%, 1)",
           "variable": ""
         },
         "evergreen2": {
           "isVar": true,
           "key": "$evergreen2",
-          "name": "color-45",
+          "name": "color-51",
           "val": "hsla(146, 42%, 93%, 1)",
           "variable": ""
         },
         "evergreen3": {
           "isVar": true,
           "key": "$evergreen3",
-          "name": "color-46",
+          "name": "color-52",
           "val": "hsla(146, 41%, 89%, 1)",
           "variable": ""
         },
         "evergreen4": {
           "isVar": true,
           "key": "$evergreen4",
-          "name": "color-47",
+          "name": "color-53",
           "val": "hsla(146, 55%, 84%, 1)",
           "variable": ""
         },
         "evergreen5": {
           "isVar": true,
           "key": "$evergreen5",
-          "name": "color-48",
+          "name": "color-54",
           "val": "hsla(146, 45%, 73%, 1)",
           "variable": ""
         },
         "evergreen6": {
           "isVar": true,
           "key": "$evergreen6",
-          "name": "color-49",
+          "name": "color-55",
           "val": "hsla(146, 33%, 54%, 1)",
           "variable": ""
         },
         "evergreen7": {
           "isVar": true,
           "key": "$evergreen7",
-          "name": "color-50",
+          "name": "color-56",
           "val": "hsla(147, 37%, 39%, 1)",
           "variable": ""
         },
         "evergreen8": {
           "isVar": true,
           "key": "$evergreen8",
-          "name": "color-51",
+          "name": "color-57",
           "val": "hsla(146, 41%, 28%, 1)",
           "variable": ""
         },
         "evergreen9": {
           "isVar": true,
           "key": "$evergreen9",
-          "name": "color-52",
+          "name": "color-58",
           "val": "hsla(147, 43%, 19%, 1)",
           "variable": ""
         },
         "gray": {
           "isVar": true,
           "key": "$gray",
-          "name": "color-53",
+          "name": "color-59",
           "val": "hsla(217, 6%, 63%, 1)",
           "variable": ""
         },
         "gray1": {
           "isVar": true,
           "key": "$gray1",
-          "name": "color-54",
+          "name": "color-60",
           "val": "hsla(210, 20%, 98%, 1)",
           "variable": ""
         },
         "gray10": {
           "isVar": true,
           "key": "$gray10",
-          "name": "color-55",
+          "name": "color-61",
           "val": "hsla(200, 11%, 22%, 1)",
           "variable": ""
         },
         "gray11": {
           "isVar": true,
           "key": "$gray11",
-          "name": "color-56",
+          "name": "color-62",
           "val": "hsla(202, 24%, 12%, 1)",
           "variable": ""
         },
         "gray12": {
           "isVar": true,
           "key": "$gray12",
-          "name": "color-57",
+          "name": "color-63",
           "val": "hsla(200, 39%, 5%, 1)",
           "variable": ""
         },
         "gray2": {
           "isVar": true,
           "key": "$gray2",
-          "name": "color-58",
+          "name": "color-64",
           "val": "hsla(217, 24%, 96%, 1)",
           "variable": ""
         },
         "gray3": {
           "isVar": true,
           "key": "$gray3",
-          "name": "color-59",
+          "name": "color-65",
           "val": "hsla(217, 24%, 93%, 1)",
           "variable": ""
         },
         "gray4": {
           "isVar": true,
           "key": "$gray4",
-          "name": "color-60",
+          "name": "color-66",
           "val": "hsla(216, 19%, 88%, 1)",
           "variable": ""
         },
         "gray5": {
           "isVar": true,
           "key": "$gray5",
-          "name": "color-61",
+          "name": "color-67",
           "val": "hsla(217, 17%, 84%, 1)",
           "variable": ""
         },
         "gray6": {
           "isVar": true,
           "key": "$gray6",
-          "name": "color-62",
+          "name": "color-68",
           "val": "hsla(217, 8%, 73%, 1)",
           "variable": ""
         },
         "gray7": {
           "isVar": true,
           "key": "$gray7",
-          "name": "color-63",
+          "name": "color-69",
           "val": "hsla(217, 6%, 63%, 1)",
           "variable": ""
         },
         "gray8": {
           "isVar": true,
           "key": "$gray8",
-          "name": "color-64",
+          "name": "color-70",
           "val": "hsla(205, 5%, 51%, 1)",
           "variable": ""
         },
         "gray9": {
           "isVar": true,
           "key": "$gray9",
-          "name": "color-65",
+          "name": "color-71",
           "val": "hsla(200, 9%, 33%, 1)",
           "variable": ""
         },
         "green": {
           "isVar": true,
           "key": "$green",
-          "name": "color-66",
+          "name": "color-72",
           "val": "hsla(122, 37%, 56%, 1)",
           "variable": ""
         },
         "green1": {
           "isVar": true,
           "key": "$green1",
-          "name": "color-67",
+          "name": "color-73",
           "val": "hsla(120, 72%, 99%, 1)",
           "variable": ""
         },
         "green10": {
           "isVar": true,
           "key": "$green10",
-          "name": "color-68",
+          "name": "color-74",
           "val": "hsla(128, 29%, 15%, 1)",
           "variable": ""
         },
         "green11": {
           "isVar": true,
           "key": "$green11",
-          "name": "color-69",
+          "name": "color-75",
           "val": "hsla(133, 65%, 29%, 1)",
           "variable": ""
         },
         "green12": {
           "isVar": true,
           "key": "$green12",
-          "name": "color-70",
+          "name": "color-76",
           "val": "hsla(133, 71%, 21%, 1)",
           "variable": ""
         },
         "green2": {
           "isVar": true,
           "key": "$green2",
-          "name": "color-71",
+          "name": "color-77",
           "val": "hsla(120, 71%, 97%, 1)",
           "variable": ""
         },
         "green3": {
           "isVar": true,
           "key": "$green3",
-          "name": "color-72",
+          "name": "color-78",
           "val": "hsla(103, 54%, 92%, 1)",
           "variable": ""
         },
         "green4": {
           "isVar": true,
           "key": "$green4",
-          "name": "color-73",
+          "name": "color-79",
           "val": "hsla(106, 40%, 86%, 1)",
           "variable": ""
         },
         "green5": {
           "isVar": true,
           "key": "$green5",
-          "name": "color-74",
+          "name": "color-80",
           "val": "hsla(108, 38%, 80%, 1)",
           "variable": ""
         },
         "green6": {
           "isVar": true,
           "key": "$green6",
-          "name": "color-75",
+          "name": "color-81",
           "val": "hsla(108, 37%, 70%, 1)",
           "variable": ""
         },
         "green7": {
           "isVar": true,
           "key": "$green7",
-          "name": "color-76",
+          "name": "color-82",
           "val": "hsla(119, 38%, 65%, 1)",
           "variable": ""
         },
         "green8": {
           "isVar": true,
           "key": "$green8",
-          "name": "color-77",
+          "name": "color-83",
           "val": "hsla(122, 37%, 56%, 1)",
           "variable": ""
         },
         "green9": {
           "isVar": true,
           "key": "$green9",
-          "name": "color-78",
+          "name": "color-84",
           "val": "hsla(132, 41%, 47%, 1)",
           "variable": ""
         },
         "red": {
           "isVar": true,
           "key": "$red",
-          "name": "color-79",
+          "name": "color-85",
           "val": "hsla(358, 70%, 56%, 1)",
           "variable": ""
         },
         "red1": {
           "isVar": true,
           "key": "$red1",
-          "name": "color-80",
+          "name": "color-86",
           "val": "hsla(0, 100%, 99%, 1)",
           "variable": ""
         },
         "red10": {
           "isVar": true,
           "key": "$red10",
-          "name": "color-81",
+          "name": "color-87",
           "val": "hsla(358, 97%, 29%, 1)",
           "variable": ""
         },
         "red11": {
           "isVar": true,
           "key": "$red11",
-          "name": "color-82",
+          "name": "color-88",
           "val": "hsla(358, 100%, 20%, 1)",
           "variable": ""
         },
         "red12": {
           "isVar": true,
           "key": "$red12",
-          "name": "color-83",
+          "name": "color-89",
           "val": "hsla(355, 49%, 15%, 1)",
           "variable": ""
         },
         "red2": {
           "isVar": true,
           "key": "$red2",
-          "name": "color-84",
+          "name": "color-90",
           "val": "hsla(0, 100%, 97%, 1)",
           "variable": ""
         },
         "red3": {
           "isVar": true,
           "key": "$red3",
-          "name": "color-85",
+          "name": "color-91",
           "val": "hsla(0, 100%, 95%, 1)",
           "variable": ""
         },
         "red4": {
           "isVar": true,
           "key": "$red4",
-          "name": "color-86",
+          "name": "color-92",
           "val": "hsla(0, 100%, 93%, 1)",
           "variable": ""
         },
         "red5": {
           "isVar": true,
           "key": "$red5",
-          "name": "color-87",
+          "name": "color-93",
           "val": "hsla(0, 100%, 89%, 1)",
           "variable": ""
         },
         "red6": {
           "isVar": true,
           "key": "$red6",
-          "name": "color-88",
+          "name": "color-94",
           "val": "hsla(0, 90%, 81%, 1)",
           "variable": ""
         },
         "red7": {
           "isVar": true,
           "key": "$red7",
-          "name": "color-89",
+          "name": "color-95",
           "val": "hsla(0, 88%, 69%, 1)",
           "variable": ""
         },
         "red8": {
           "isVar": true,
           "key": "$red8",
-          "name": "color-90",
+          "name": "color-96",
           "val": "hsla(358, 70%, 56%, 1)",
           "variable": ""
         },
         "red9": {
           "isVar": true,
           "key": "$red9",
-          "name": "color-91",
+          "name": "color-97",
           "val": "hsla(358, 68%, 42%, 1)",
           "variable": ""
         },
         "yellow": {
           "isVar": true,
           "key": "$yellow",
-          "name": "color-92",
+          "name": "color-98",
           "val": "hsla(49, 100%, 50%, 1)",
           "variable": ""
         },
         "yellow1": {
           "isVar": true,
           "key": "$yellow1",
-          "name": "color-93",
+          "name": "color-99",
           "val": "hsla(60, 65%, 98%, 1)",
           "variable": ""
         },
         "yellow10": {
           "isVar": true,
           "key": "$yellow10",
-          "name": "color-94",
+          "name": "color-100",
           "val": " hsla(47, 99%, 38%, 1)",
           "variable": ""
         },
         "yellow11": {
           "isVar": true,
           "key": "$yellow11",
-          "name": "color-95",
+          "name": "color-101",
           "val": " hsla(42, 100%, 31%, 1)",
           "variable": ""
         },
         "yellow12": {
           "isVar": true,
           "key": "$yellow12",
-          "name": "color-96",
+          "name": "color-102",
           "val": " hsla(41, 56%, 13%, 1)",
           "variable": ""
         },
         "yellow2": {
           "isVar": true,
           "key": "$yellow2",
-          "name": "color-97",
+          "name": "color-103",
           "val": "hsla(52, 100%, 95%, 1)",
           "variable": ""
         },
         "yellow3": {
           "isVar": true,
           "key": "$yellow3",
-          "name": "color-98",
+          "name": "color-104",
           "val": "hsla(55, 100%, 91%, 1)",
           "variable": ""
         },
         "yellow4": {
           "isVar": true,
           "key": "$yellow4",
-          "name": "color-99",
+          "name": "color-105",
           "val": "hsla(50, 100%, 85%, 1)",
           "variable": ""
         },
         "yellow5": {
           "isVar": true,
           "key": "$yellow5",
-          "name": "color-100",
+          "name": "color-106",
           "val": "hsla(47, 98%, 81%, 1)",
           "variable": ""
         },
         "yellow6": {
           "isVar": true,
           "key": "$yellow6",
-          "name": "color-101",
+          "name": "color-107",
           "val": "hsla(47, 100%, 75%, 1)",
           "variable": ""
         },
         "yellow7": {
           "isVar": true,
           "key": "$yellow7",
-          "name": "color-102",
+          "name": "color-108",
           "val": "hsla(50, 100%, 58%, 1)",
           "variable": ""
         },
         "yellow8": {
           "isVar": true,
           "key": "$yellow8",
-          "name": "color-103",
+          "name": "color-109",
           "val": "hsla(49, 100%, 50%, 1)",
           "variable": ""
         },
         "yellow9": {
           "isVar": true,
           "key": "$yellow9",
-          "name": "color-104",
+          "name": "color-110",
           "val": "hsla(47, 92%, 46%, 1)",
           "variable": ""
         },
         "transparent": {
           "isVar": true,
           "key": "$transparent",
-          "name": "color-105",
+          "name": "color-111",
           "val": "transparent",
           "variable": ""
         },
         "white": {
           "isVar": true,
           "key": "$white",
-          "name": "color-106",
+          "name": "color-112",
           "val": "hsla(0, 0%, 100%, 1)",
           "variable": ""
         }
@@ -28274,563 +28160,605 @@
         "val": "hsla(0, 0%, 0%, 0.44)",
         "variable": ""
       },
+      "$color.purple": {
+        "isVar": true,
+        "key": "$purple",
+        "name": "color-27",
+        "val": "hsl(237, 83%, 100%)",
+        "variable": ""
+      },
+      "$color.purple1": {
+        "isVar": true,
+        "key": "$purple1",
+        "name": "color-28",
+        "val": "hsl(237, 83%, 70%)",
+        "variable": ""
+      },
+      "$color.purple2": {
+        "isVar": true,
+        "key": "$purple2",
+        "name": "color-29",
+        "val": "hsl(237, 83%, 60%)",
+        "variable": ""
+      },
+      "$color.purple3": {
+        "isVar": true,
+        "key": "$purple3",
+        "name": "color-30",
+        "val": "hsl(237, 83%, 50%)",
+        "variable": ""
+      },
+      "$color.purple4": {
+        "isVar": true,
+        "key": "$purple4",
+        "name": "color-31",
+        "val": "hsl(237, 83%, 25%)",
+        "variable": ""
+      },
+      "$color.purple5": {
+        "isVar": true,
+        "key": "$purple5",
+        "name": "color-32",
+        "val": "hsl(237, 83%, 10%)",
+        "variable": ""
+      },
       "$color.blue": {
         "isVar": true,
         "key": "$blue",
-        "name": "color-27",
+        "name": "color-33",
         "val": "hsla(206, 100%, 50%, 1)",
         "variable": ""
       },
       "$color.blue1": {
         "isVar": true,
         "key": "$blue1",
-        "name": "color-28",
+        "name": "color-34",
         "val": "hsla(210, 100%, 99%, 1)",
         "variable": ""
       },
       "$color.blue10": {
         "isVar": true,
         "key": "$blue10",
-        "name": "color-29",
+        "name": "color-35",
         "val": "hsla(211, 100%, 43%, 1)",
         "variable": ""
       },
       "$color.blue11": {
         "isVar": true,
         "key": "$blue11",
-        "name": "color-30",
+        "name": "color-36",
         "val": "hsla(211, 100%, 29%, 1)",
         "variable": ""
       },
       "$color.blue12": {
         "isVar": true,
         "key": "$blue12",
-        "name": "color-31",
+        "name": "color-37",
         "val": "hsla(211, 100%, 15%, 1)",
         "variable": ""
       },
       "$color.blue2": {
         "isVar": true,
         "key": "$blue2",
-        "name": "color-32",
+        "name": "color-38",
         "val": "hsla(210, 100%, 98%, 1)",
         "variable": ""
       },
       "$color.blue3": {
         "isVar": true,
         "key": "$blue3",
-        "name": "color-33",
+        "name": "color-39",
         "val": "hsla(210, 100%, 94%, 1)",
         "variable": ""
       },
       "$color.blue4": {
         "isVar": true,
         "key": "$blue4",
-        "name": "color-34",
+        "name": "color-40",
         "val": "hsla(209, 96%, 90%, 1)",
         "variable": ""
       },
       "$color.blue5": {
         "isVar": true,
         "key": "$blue5",
-        "name": "color-35",
+        "name": "color-41",
         "val": "hsla(209, 82%, 85%, 1)",
         "variable": ""
       },
       "$color.blue6": {
         "isVar": true,
         "key": "$blue6",
-        "name": "color-36",
+        "name": "color-42",
         "val": "hsla(208, 78%, 77%, 1)",
         "variable": ""
       },
       "$color.blue7": {
         "isVar": true,
         "key": "$blue7",
-        "name": "color-37",
+        "name": "color-43",
         "val": "hsla(206, 82%, 65%, 1)",
         "variable": ""
       },
       "$color.blue8": {
         "isVar": true,
         "key": "$blue8",
-        "name": "color-38",
+        "name": "color-44",
         "val": "hsla(206, 100%, 50%, 1)",
         "variable": ""
       },
       "$color.blue9": {
         "isVar": true,
         "key": "$blue9",
-        "name": "color-39",
+        "name": "color-45",
         "val": "hsla(208, 100%, 47%, 1)",
         "variable": ""
       },
       "$color.evergreen": {
         "isVar": true,
         "key": "$evergreen",
-        "name": "color-40",
+        "name": "color-46",
         "val": "hsla(146, 41%, 28%, 1)",
         "variable": ""
       },
       "$color.evergreen1": {
         "isVar": true,
         "key": "$evergreen1",
-        "name": "color-41",
+        "name": "color-47",
         "val": "hsla(147, 28%, 96%, 1)",
         "variable": ""
       },
       "$color.evergreen10": {
         "isVar": true,
         "key": "$evergreen10",
-        "name": "color-42",
+        "name": "color-48",
         "val": "hsla(146, 54%, 21%, 1)",
         "variable": ""
       },
       "$color.evergreen11": {
         "isVar": true,
         "key": "$evergreen11",
-        "name": "color-43",
+        "name": "color-49",
         "val": "hsla(148, 39%, 16%, 1)",
         "variable": ""
       },
       "$color.evergreen12": {
         "isVar": true,
         "key": "$evergreen12",
-        "name": "color-44",
+        "name": "color-50",
         "val": "hsla(151, 64%, 8%, 1)",
         "variable": ""
       },
       "$color.evergreen2": {
         "isVar": true,
         "key": "$evergreen2",
-        "name": "color-45",
+        "name": "color-51",
         "val": "hsla(146, 42%, 93%, 1)",
         "variable": ""
       },
       "$color.evergreen3": {
         "isVar": true,
         "key": "$evergreen3",
-        "name": "color-46",
+        "name": "color-52",
         "val": "hsla(146, 41%, 89%, 1)",
         "variable": ""
       },
       "$color.evergreen4": {
         "isVar": true,
         "key": "$evergreen4",
-        "name": "color-47",
+        "name": "color-53",
         "val": "hsla(146, 55%, 84%, 1)",
         "variable": ""
       },
       "$color.evergreen5": {
         "isVar": true,
         "key": "$evergreen5",
-        "name": "color-48",
+        "name": "color-54",
         "val": "hsla(146, 45%, 73%, 1)",
         "variable": ""
       },
       "$color.evergreen6": {
         "isVar": true,
         "key": "$evergreen6",
-        "name": "color-49",
+        "name": "color-55",
         "val": "hsla(146, 33%, 54%, 1)",
         "variable": ""
       },
       "$color.evergreen7": {
         "isVar": true,
         "key": "$evergreen7",
-        "name": "color-50",
+        "name": "color-56",
         "val": "hsla(147, 37%, 39%, 1)",
         "variable": ""
       },
       "$color.evergreen8": {
         "isVar": true,
         "key": "$evergreen8",
-        "name": "color-51",
+        "name": "color-57",
         "val": "hsla(146, 41%, 28%, 1)",
         "variable": ""
       },
       "$color.evergreen9": {
         "isVar": true,
         "key": "$evergreen9",
-        "name": "color-52",
+        "name": "color-58",
         "val": "hsla(147, 43%, 19%, 1)",
         "variable": ""
       },
       "$color.gray": {
         "isVar": true,
         "key": "$gray",
-        "name": "color-53",
+        "name": "color-59",
         "val": "hsla(217, 6%, 63%, 1)",
         "variable": ""
       },
       "$color.gray1": {
         "isVar": true,
         "key": "$gray1",
-        "name": "color-54",
+        "name": "color-60",
         "val": "hsla(210, 20%, 98%, 1)",
         "variable": ""
       },
       "$color.gray10": {
         "isVar": true,
         "key": "$gray10",
-        "name": "color-55",
+        "name": "color-61",
         "val": "hsla(200, 11%, 22%, 1)",
         "variable": ""
       },
       "$color.gray11": {
         "isVar": true,
         "key": "$gray11",
-        "name": "color-56",
+        "name": "color-62",
         "val": "hsla(202, 24%, 12%, 1)",
         "variable": ""
       },
       "$color.gray12": {
         "isVar": true,
         "key": "$gray12",
-        "name": "color-57",
+        "name": "color-63",
         "val": "hsla(200, 39%, 5%, 1)",
         "variable": ""
       },
       "$color.gray2": {
         "isVar": true,
         "key": "$gray2",
-        "name": "color-58",
+        "name": "color-64",
         "val": "hsla(217, 24%, 96%, 1)",
         "variable": ""
       },
       "$color.gray3": {
         "isVar": true,
         "key": "$gray3",
-        "name": "color-59",
+        "name": "color-65",
         "val": "hsla(217, 24%, 93%, 1)",
         "variable": ""
       },
       "$color.gray4": {
         "isVar": true,
         "key": "$gray4",
-        "name": "color-60",
+        "name": "color-66",
         "val": "hsla(216, 19%, 88%, 1)",
         "variable": ""
       },
       "$color.gray5": {
         "isVar": true,
         "key": "$gray5",
-        "name": "color-61",
+        "name": "color-67",
         "val": "hsla(217, 17%, 84%, 1)",
         "variable": ""
       },
       "$color.gray6": {
         "isVar": true,
         "key": "$gray6",
-        "name": "color-62",
+        "name": "color-68",
         "val": "hsla(217, 8%, 73%, 1)",
         "variable": ""
       },
       "$color.gray7": {
         "isVar": true,
         "key": "$gray7",
-        "name": "color-63",
+        "name": "color-69",
         "val": "hsla(217, 6%, 63%, 1)",
         "variable": ""
       },
       "$color.gray8": {
         "isVar": true,
         "key": "$gray8",
-        "name": "color-64",
+        "name": "color-70",
         "val": "hsla(205, 5%, 51%, 1)",
         "variable": ""
       },
       "$color.gray9": {
         "isVar": true,
         "key": "$gray9",
-        "name": "color-65",
+        "name": "color-71",
         "val": "hsla(200, 9%, 33%, 1)",
         "variable": ""
       },
       "$color.green": {
         "isVar": true,
         "key": "$green",
-        "name": "color-66",
+        "name": "color-72",
         "val": "hsla(122, 37%, 56%, 1)",
         "variable": ""
       },
       "$color.green1": {
         "isVar": true,
         "key": "$green1",
-        "name": "color-67",
+        "name": "color-73",
         "val": "hsla(120, 72%, 99%, 1)",
         "variable": ""
       },
       "$color.green10": {
         "isVar": true,
         "key": "$green10",
-        "name": "color-68",
+        "name": "color-74",
         "val": "hsla(128, 29%, 15%, 1)",
         "variable": ""
       },
       "$color.green11": {
         "isVar": true,
         "key": "$green11",
-        "name": "color-69",
+        "name": "color-75",
         "val": "hsla(133, 65%, 29%, 1)",
         "variable": ""
       },
       "$color.green12": {
         "isVar": true,
         "key": "$green12",
-        "name": "color-70",
+        "name": "color-76",
         "val": "hsla(133, 71%, 21%, 1)",
         "variable": ""
       },
       "$color.green2": {
         "isVar": true,
         "key": "$green2",
-        "name": "color-71",
+        "name": "color-77",
         "val": "hsla(120, 71%, 97%, 1)",
         "variable": ""
       },
       "$color.green3": {
         "isVar": true,
         "key": "$green3",
-        "name": "color-72",
+        "name": "color-78",
         "val": "hsla(103, 54%, 92%, 1)",
         "variable": ""
       },
       "$color.green4": {
         "isVar": true,
         "key": "$green4",
-        "name": "color-73",
+        "name": "color-79",
         "val": "hsla(106, 40%, 86%, 1)",
         "variable": ""
       },
       "$color.green5": {
         "isVar": true,
         "key": "$green5",
-        "name": "color-74",
+        "name": "color-80",
         "val": "hsla(108, 38%, 80%, 1)",
         "variable": ""
       },
       "$color.green6": {
         "isVar": true,
         "key": "$green6",
-        "name": "color-75",
+        "name": "color-81",
         "val": "hsla(108, 37%, 70%, 1)",
         "variable": ""
       },
       "$color.green7": {
         "isVar": true,
         "key": "$green7",
-        "name": "color-76",
+        "name": "color-82",
         "val": "hsla(119, 38%, 65%, 1)",
         "variable": ""
       },
       "$color.green8": {
         "isVar": true,
         "key": "$green8",
-        "name": "color-77",
+        "name": "color-83",
         "val": "hsla(122, 37%, 56%, 1)",
         "variable": ""
       },
       "$color.green9": {
         "isVar": true,
         "key": "$green9",
-        "name": "color-78",
+        "name": "color-84",
         "val": "hsla(132, 41%, 47%, 1)",
         "variable": ""
       },
       "$color.red": {
         "isVar": true,
         "key": "$red",
-        "name": "color-79",
+        "name": "color-85",
         "val": "hsla(358, 70%, 56%, 1)",
         "variable": ""
       },
       "$color.red1": {
         "isVar": true,
         "key": "$red1",
-        "name": "color-80",
+        "name": "color-86",
         "val": "hsla(0, 100%, 99%, 1)",
         "variable": ""
       },
       "$color.red10": {
         "isVar": true,
         "key": "$red10",
-        "name": "color-81",
+        "name": "color-87",
         "val": "hsla(358, 97%, 29%, 1)",
         "variable": ""
       },
       "$color.red11": {
         "isVar": true,
         "key": "$red11",
-        "name": "color-82",
+        "name": "color-88",
         "val": "hsla(358, 100%, 20%, 1)",
         "variable": ""
       },
       "$color.red12": {
         "isVar": true,
         "key": "$red12",
-        "name": "color-83",
+        "name": "color-89",
         "val": "hsla(355, 49%, 15%, 1)",
         "variable": ""
       },
       "$color.red2": {
         "isVar": true,
         "key": "$red2",
-        "name": "color-84",
+        "name": "color-90",
         "val": "hsla(0, 100%, 97%, 1)",
         "variable": ""
       },
       "$color.red3": {
         "isVar": true,
         "key": "$red3",
-        "name": "color-85",
+        "name": "color-91",
         "val": "hsla(0, 100%, 95%, 1)",
         "variable": ""
       },
       "$color.red4": {
         "isVar": true,
         "key": "$red4",
-        "name": "color-86",
+        "name": "color-92",
         "val": "hsla(0, 100%, 93%, 1)",
         "variable": ""
       },
       "$color.red5": {
         "isVar": true,
         "key": "$red5",
-        "name": "color-87",
+        "name": "color-93",
         "val": "hsla(0, 100%, 89%, 1)",
         "variable": ""
       },
       "$color.red6": {
         "isVar": true,
         "key": "$red6",
-        "name": "color-88",
+        "name": "color-94",
         "val": "hsla(0, 90%, 81%, 1)",
         "variable": ""
       },
       "$color.red7": {
         "isVar": true,
         "key": "$red7",
-        "name": "color-89",
+        "name": "color-95",
         "val": "hsla(0, 88%, 69%, 1)",
         "variable": ""
       },
       "$color.red8": {
         "isVar": true,
         "key": "$red8",
-        "name": "color-90",
+        "name": "color-96",
         "val": "hsla(358, 70%, 56%, 1)",
         "variable": ""
       },
       "$color.red9": {
         "isVar": true,
         "key": "$red9",
-        "name": "color-91",
+        "name": "color-97",
         "val": "hsla(358, 68%, 42%, 1)",
         "variable": ""
       },
       "$color.yellow": {
         "isVar": true,
         "key": "$yellow",
-        "name": "color-92",
+        "name": "color-98",
         "val": "hsla(49, 100%, 50%, 1)",
         "variable": ""
       },
       "$color.yellow1": {
         "isVar": true,
         "key": "$yellow1",
-        "name": "color-93",
+        "name": "color-99",
         "val": "hsla(60, 65%, 98%, 1)",
         "variable": ""
       },
       "$color.yellow10": {
         "isVar": true,
         "key": "$yellow10",
-        "name": "color-94",
+        "name": "color-100",
         "val": " hsla(47, 99%, 38%, 1)",
         "variable": ""
       },
       "$color.yellow11": {
         "isVar": true,
         "key": "$yellow11",
-        "name": "color-95",
+        "name": "color-101",
         "val": " hsla(42, 100%, 31%, 1)",
         "variable": ""
       },
       "$color.yellow12": {
         "isVar": true,
         "key": "$yellow12",
-        "name": "color-96",
+        "name": "color-102",
         "val": " hsla(41, 56%, 13%, 1)",
         "variable": ""
       },
       "$color.yellow2": {
         "isVar": true,
         "key": "$yellow2",
-        "name": "color-97",
+        "name": "color-103",
         "val": "hsla(52, 100%, 95%, 1)",
         "variable": ""
       },
       "$color.yellow3": {
         "isVar": true,
         "key": "$yellow3",
-        "name": "color-98",
+        "name": "color-104",
         "val": "hsla(55, 100%, 91%, 1)",
         "variable": ""
       },
       "$color.yellow4": {
         "isVar": true,
         "key": "$yellow4",
-        "name": "color-99",
+        "name": "color-105",
         "val": "hsla(50, 100%, 85%, 1)",
         "variable": ""
       },
       "$color.yellow5": {
         "isVar": true,
         "key": "$yellow5",
-        "name": "color-100",
+        "name": "color-106",
         "val": "hsla(47, 98%, 81%, 1)",
         "variable": ""
       },
       "$color.yellow6": {
         "isVar": true,
         "key": "$yellow6",
-        "name": "color-101",
+        "name": "color-107",
         "val": "hsla(47, 100%, 75%, 1)",
         "variable": ""
       },
       "$color.yellow7": {
         "isVar": true,
         "key": "$yellow7",
-        "name": "color-102",
+        "name": "color-108",
         "val": "hsla(50, 100%, 58%, 1)",
         "variable": ""
       },
       "$color.yellow8": {
         "isVar": true,
         "key": "$yellow8",
-        "name": "color-103",
+        "name": "color-109",
         "val": "hsla(49, 100%, 50%, 1)",
         "variable": ""
       },
       "$color.yellow9": {
         "isVar": true,
         "key": "$yellow9",
-        "name": "color-104",
+        "name": "color-110",
         "val": "hsla(47, 92%, 46%, 1)",
         "variable": ""
       },
       "$color.transparent": {
         "isVar": true,
         "key": "$transparent",
-        "name": "color-105",
+        "name": "color-111",
         "val": "transparent",
         "variable": ""
       },
       "$color.white": {
         "isVar": true,
         "key": "$white",
-        "name": "color-106",
+        "name": "color-112",
         "val": "hsla(0, 0%, 100%, 1)",
         "variable": ""
       },
