@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { YStack, Text } from 'tamagui';
 
-const Profile = () => {
+const Account = () => {
   const insets = useSafeAreaInsets();
 
   return (
@@ -19,10 +19,10 @@ const Profile = () => {
     >
       <YStack>
         <Text fontWeight={'$600'} fontSize={'$h2'}>
-          My Profile 😁
+          My Account 😁
         </Text>
         <Text> Profile Image</Text>
-        <Text> My Account</Text>
+        <Link href="/account"> My Account</Link>
         <Text> Give Feedback</Text>
       </YStack>
 
@@ -37,4 +37,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Account;
