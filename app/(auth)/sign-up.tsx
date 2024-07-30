@@ -5,6 +5,8 @@ import { Button } from '@/design-components/components/Button';
 import { useForm, Controller } from 'react-hook-form';
 import { useSignUp } from '@/queries/AuthQueries';
 import { TextInput } from '@/design-components/components/TextInput';
+import { Eye } from '@tamagui/lucide-icons'
+
 
 type FormData = {
   email: string;
@@ -36,7 +38,7 @@ export default function SignUpScreen() {
       paddingHorizontal="$md"
       justifyContent="space-between"
     >
-      <YStack gap="$xl">
+      <YStack gap="$xxl">
         <YStack gap="$xs">
           <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple1'}>
             Sign Up
@@ -49,6 +51,7 @@ export default function SignUpScreen() {
               height: 300,
             }}
           />
+   
         </YStack>
        
         <YStack gap="$xs">
@@ -63,6 +66,7 @@ export default function SignUpScreen() {
                 value={value}
                 placeholder="jon@gmail.com"
                 label="Email"
+                
               />
             )}
             name="email"

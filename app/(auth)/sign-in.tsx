@@ -41,7 +41,7 @@ export default function SignIn() {
       paddingHorizontal="$md"
       justifyContent="space-between"
     >
-      <YStack gap="$lg">
+      <YStack gap="$xxl">
         <YStack gap="$xs">
           <Text fontSize={'$h1'} fontWeight={'$600'} color={'$purple1'}>
             Login Now
