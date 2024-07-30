@@ -1,6 +1,5 @@
 import { AuthService } from '@/services/AuthService';
-import { createQueryKeys } from '@lukemorales/query-key-factory';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation } from '@tanstack/react-query';
 import { router } from 'expo-router';
 
 
