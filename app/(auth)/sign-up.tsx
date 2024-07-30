@@ -27,7 +27,6 @@ export default function SignUpScreen() {
   });
   const onSubmit = handleSubmit(async ({ email, password }) => {
     signUp({ email, password });
-    router.replace('/');
   });
 
   return (

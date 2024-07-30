@@ -1,6 +1,7 @@
 import { AuthService } from '@/services/AuthService';
 import { createQueryKeys } from '@lukemorales/query-key-factory';
 import { useMutation, useQuery } from '@tanstack/react-query';
+import { router } from 'expo-router';
 
 
 
@@ -11,6 +12,7 @@ import { useMutation, useQuery } from '@tanstack/react-query';
         await AuthService.signUp({ email, password });
       },
       onSuccess: () => {
+        router.replace('/');
         console.log('success', 'User created');
       },
     });
