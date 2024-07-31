@@ -33,9 +33,9 @@ export function TextInput({
       onPress={() => ref.current?.focus()}
       paddingHorizontal="$xs"
       paddingVertical="$xs"
-      shadowRadius={"$xs"}
-      shadowColor={"$black"}
-      shadowOffset={{height: 4, width: 2}}
+      shadowRadius={'$xs'}
+      shadowColor={'$black'}
+      shadowOffset={{ height: 4, width: 2 }}
       shadowOpacity={0.1}
     >
       {label ? (
@@ -61,9 +61,14 @@ export function TextInput({
           {...props}
         />
         {isPasswordField ? (
-          <Ionicons onPress={() => setIsPasswordVisible(!isPasswordVisible)} name={isPasswordVisible ? "eye-outline" : "eye-off-outline"} size={32} color="black" />
+          <YStack onPress={() => setIsPasswordVisible(!isPasswordVisible)}>
+            <Ionicons
+              name={isPasswordVisible ? 'eye-outline' : 'eye-off-outline'}
+              size={32}
+              color="black"
+            />
+          </YStack>
         ) : null}
-         
       </XStack>
     </YStack>
   );
