@@ -6,6 +6,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { useSignUp } from '@/queries/AuthQueries';
 import { TextInput } from '@/design-components/components/TextInput';
 import { Eye } from '@tamagui/lucide-icons'
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 
 type FormData = {
@@ -82,10 +83,12 @@ export default function SignUpScreen() {
                 onChangeText={onChange}
                 value={value}
                 label="Password"
+                isPasswordField
               />
             )}
             name="password"
           />
+           
           {errors.password && <Text color="$red">This is required.</Text>}
         </YStack>
       </YStack>

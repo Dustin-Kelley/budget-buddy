@@ -1,18 +1,22 @@
-import { useRef } from 'react';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { useRef, useState } from 'react';
 import { TextInput as RNTextInput } from 'react-native';
 import { Input, InputProps, Label, XStack, YStack, getTokens } from 'tamagui';
 
 interface TextInputProps extends InputProps {
   readonly inputRef?: React.RefObject<RNTextInput>;
   readonly label?: string;
+  readonly isPasswordField?: boolean;
 }
 
 export function TextInput({
   borderRadius,
   inputRef,
   label,
+  isPasswordField,
   ...props
 }: TextInputProps) {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const textInputRef = useRef<RNTextInput>(null);
   const ref = inputRef || textInputRef;
 
@@ -53,8 +57,13 @@ export function TextInput({
           placeholderTextColor={getTokens().color.$gray7.val}
           ref={inputRef}
           unstyled
+          secureTextEntry={isPasswordField && !isPasswordVisible}
           {...props}
         />
+        {isPasswordField ? (
+          <Ionicons onPress={() => setIsPasswordVisible(!isPasswordVisible)} name={isPasswordVisible ? "eye-outline" : "eye-off-outline"} size={32} color="black" />
+        ) : null}
+         
       </XStack>
     </YStack>
   );
