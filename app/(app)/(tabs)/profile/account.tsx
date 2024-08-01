@@ -62,8 +62,8 @@ const Account = () => {
       </YStack>
 
       <YStack paddingBottom={insets.bottom}>
-        <Button onPress={() => supabase.auth.signOut()}>
-          <Button.Text>Sign Out</Button.Text>
+        <Button onPress={onSubmit}>
+          <Button.Text>Update Profile</Button.Text>
         </Button>
       </YStack>
     </YStack>
