@@ -30,7 +30,6 @@ export default function SignIn() {
 
   const onSubmit = handleSubmit(async ({ email, password }) => {
     signIn({ email, password });
-    router.replace('/');
   });
 
   return (
@@ -76,9 +75,10 @@ export default function SignIn() {
               required: true,
             }}
             render={({ field: { onChange, value } }) => (
-              <TextInput label="Password" onChangeText={onChange} value={value} />
+              <TextInput isPasswordField label="Password" onChangeText={onChange} value={value} />
             )}
             name="password"
+            
           />
           {errors.password && <Text color="$red">This is required.</Text>}
         </YStack>
@@ -97,11 +97,4 @@ export default function SignIn() {
   );
 }
 
-const styles = StyleSheet.create({
-  input: {
-    borderWidth: 1,
-    borderColor: 'gray',
-    backgroundColor: 'white',
-    borderRadius: 5,
-  },
-});
+

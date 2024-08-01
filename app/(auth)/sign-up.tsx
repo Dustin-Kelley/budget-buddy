@@ -5,8 +5,7 @@ import { Button } from '@/design-components/components/Button';
 import { useForm, Controller } from 'react-hook-form';
 import { useSignUp } from '@/queries/AuthQueries';
 import { TextInput } from '@/design-components/components/TextInput';
-import { Eye } from '@tamagui/lucide-icons'
-import Ionicons from '@expo/vector-icons/Ionicons';
+
 
 
 type FormData = {

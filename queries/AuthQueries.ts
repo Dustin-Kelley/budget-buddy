@@ -12,8 +12,10 @@ import { router } from 'expo-router';
       },
       onSuccess: () => {
         router.replace('/');
-        console.log('success', 'User created');
       },
+      onError: () => {
+        console.log('There was an error signing up');
+        },
     });
   
     return {
@@ -28,7 +30,10 @@ import { router } from 'expo-router';
         await AuthService.signIn({ email, password });
       },
       onSuccess: () => {
-        console.log('success', 'signed in');
+        router.replace('/');
+      },
+      onError: () => {
+      console.log('There was an error logging in');
       },
     });
   
