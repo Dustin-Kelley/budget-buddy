@@ -58,6 +58,7 @@ export default function SignUpScreen() {
             control={control}
             rules={{
               required: true,
+              pattern:  /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             }}
             render={({ field: { onChange, value } }) => (
               <TextInput
@@ -70,7 +71,7 @@ export default function SignUpScreen() {
             )}
             name="email"
           />
-          {errors.email && <Text color="$red">This is required.</Text>}
+          {errors.email && <Text color="$red">a valid email is required.</Text>}
 
           <Controller
             control={control}
@@ -88,7 +89,7 @@ export default function SignUpScreen() {
             name="password"
           />
            
-          {errors.password && <Text color="$red">This is required.</Text>}
+          {errors.password && <Text color="$red">password is required.</Text>}
         </YStack>
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">

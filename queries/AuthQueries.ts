@@ -13,9 +13,6 @@ import { router } from 'expo-router';
       onSuccess: () => {
         router.replace('/');
       },
-      onError: () => {
-        console.log('There was an error signing up');
-        },
     });
   
     return {
