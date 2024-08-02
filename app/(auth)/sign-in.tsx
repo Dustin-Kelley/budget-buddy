@@ -60,13 +60,16 @@ export default function SignIn() {
             control={control}
             rules={{
               required: true,
+              pattern:  /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+              
             }}
             render={({ field: { onChange, value } }) => (
               <TextInput onChangeText={onChange} value={value} label="Email" />
             )}
             name="email"
+
           />
-          {errors.email && <Text color="$red">This is required.</Text>}
+          {errors.email && <Text color="$red">a valid email is required.</Text>}
 
      
           <Controller
@@ -80,7 +83,7 @@ export default function SignIn() {
             name="password"
             
           />
-          {errors.password && <Text color="$red">This is required.</Text>}
+          {errors.password && <Text color="$red">password is required.</Text>}
         </YStack>
       </YStack>
       <YStack paddingBottom={insets.bottom + 10} gap="$xs" alignItems="center">
