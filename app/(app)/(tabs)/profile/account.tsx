@@ -1,6 +1,7 @@
 import { Button } from '@/design-components/components/Button';
 import { TextInput } from '@/design-components/components/TextInput';
 import { supabase } from '@/lib/supabase';
+import { useUpdateProfile } from '@/queries/useProfileMutations';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link } from 'expo-router';
 import React from 'react';
@@ -15,6 +16,7 @@ type FormData = {
 
 const Account = () => {
   const insets = useSafeAreaInsets();
+  const {updateProfile} = useUpdateProfile();
 
   const {
     control,
@@ -25,8 +27,9 @@ const Account = () => {
       fullName: '',
     },
   });
-  const onSubmit = handleSubmit(async (data) => {
-    console.log(data);
+  const onSubmit = handleSubmit(async ({ fullName }) => {
+    console.log(fullName);
+    await updateProfile({ fullName });
   });
 
   return (

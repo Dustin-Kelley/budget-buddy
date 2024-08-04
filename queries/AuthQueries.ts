@@ -2,9 +2,6 @@ import { AuthService } from '@/services/AuthService';
 import { useMutation } from '@tanstack/react-query';
 import { router } from 'expo-router';
 
-
-
-
   export function useSignUp() {
     const { isPending, mutate } = useMutation({
       mutationFn: async ({ email, password }: { email: string, password: string }) => {
@@ -44,3 +41,5 @@ import { router } from 'expo-router';
     signIn: mutate
     };
   }
+
+ 

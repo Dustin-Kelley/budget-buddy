@@ -15,4 +15,5 @@ export const AuthService = {
 
     if (error) throw Error('Failed to sign in', error);
   },
+
 };
