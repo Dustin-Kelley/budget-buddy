@@ -1,6 +1,7 @@
 import { Button } from '@/design-components/components/Button';
 import { TextInput } from '@/design-components/components/TextInput';
 import { supabase } from '@/lib/supabase';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link } from 'expo-router';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -30,13 +31,15 @@ const Account = () => {
 
   return (
     <YStack
-      gap="$xs"
       paddingTop={insets.top}
       flexGrow={1}
       paddingHorizontal="$md"
       justifyContent="space-between"
     >
-      <YStack>
+      <YStack gap="$sm">
+        <Link href="/(app)/(tabs)/profile/profile">
+          <Ionicons size={24}  name="arrow-back-outline"  />
+        </Link>
         <Text fontWeight={'$600'} fontSize={'$h2'}>
           My Account 😁
         </Text>

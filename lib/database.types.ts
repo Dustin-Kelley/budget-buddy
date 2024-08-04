@@ -11,26 +11,32 @@ export type Database = {
     Tables: {
       users: {
         Row: {
-          created_at: string | null
-          fullName: string | null
+          avatar_url: string | null
+          full_name: string | null
           id: string
-          imageUrl: string | null
+          updated_at: string | null
+          username: string | null
+          website: string | null
         }
         Insert: {
-          created_at?: string | null
-          fullName?: string | null
+          avatar_url?: string | null
+          full_name?: string | null
           id: string
-          imageUrl?: string | null
+          updated_at?: string | null
+          username?: string | null
+          website?: string | null
         }
         Update: {
-          created_at?: string | null
-          fullName?: string | null
+          avatar_url?: string | null
+          full_name?: string | null
           id?: string
-          imageUrl?: string | null
+          updated_at?: string | null
+          username?: string | null
+          website?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "profiles_id_fkey"
+            foreignKeyName: "users_id_fkey"
             columns: ["id"]
             isOneToOne: true
             referencedRelation: "users"

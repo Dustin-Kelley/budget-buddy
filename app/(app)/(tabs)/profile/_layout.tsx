@@ -21,6 +21,8 @@ import {
     return (
           <Stack>
             <Stack.Screen name="profile" options={{ headerShown: false }} />
+            <Stack.Screen name="account" options={{ headerShown: false }} />
+
           </Stack>
    
     );
