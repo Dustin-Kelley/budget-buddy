@@ -8,10 +8,15 @@ import { router } from 'expo-router';
   export function useSignUp() {
     const { isPending, mutate } = useMutation({
       mutationFn: async ({ email, password }: { email: string, password: string }) => {
+        if(!email || !password) throw new Error('Email and password are required');
         await AuthService.signUp({ email, password });
       },
       onSuccess: () => {
+        console.log('Sign up successful');
         router.replace('/');
+      },
+      onError: (error) => {
+      console.log('There was an error signing up', error);
       },
     });
   

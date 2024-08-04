@@ -1,16 +1,18 @@
-import { supabase } from "@/lib/supabase";
+import { supabase } from '@/lib/supabase';
 
 export const AuthService = {
-    async signUp({ email, password }: { email: string, password: string }) {
-        const { error } = await supabase.auth.signUp({ email, password })
+  async signUp({ email, password }: { email: string; password: string }) {
+    const { error } = await supabase.auth.signUp({ email, password });
 
-        if (error) throw Error('Failed to sign up', error)
-    },
+    if (error) throw Error('Failed to sign up', error);
+  },
 
-    async signIn({ email, password }: { email: string, password: string }) {
-        const { error } = await supabase.auth.signInWithPassword({ email, password })
+  async signIn({ email, password }: { email: string; password: string }) {
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
-        if (error) throw Error('Failed to sign in', error)
-    }
-
+    if (error) throw Error('Failed to sign in', error);
+  },
 };
