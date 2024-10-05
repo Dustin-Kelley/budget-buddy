@@ -20,18 +20,13 @@ const user = createQueryKeys('user', {
           avatar_image: null,
           email: user.email || null,
           error,
-          first_name: null,
+          full_name: null,
           id: user.id,
-          initials: null,
-          isIndividual: false,
-          last_name: null,
-          phone: user.phone || null,
         };
         return { userData };
       }
 
       return { userData };
-
     },
     queryKey: [{}],
   }),
@@ -64,4 +59,3 @@ export function useCurrentUser() {
     userID: data?.userData?.id || '',
   };
 }
-

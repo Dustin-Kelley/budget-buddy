@@ -1,5 +1,6 @@
 import { Button } from '@/design-components/components/Button';
 import { supabase } from '@/lib/supabase';
+import { useCurrentUser } from '@/queries/userQueries';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link } from 'expo-router';
 import React from 'react';
@@ -9,6 +10,7 @@ import { YStack, Text, XStack, getTokens } from 'tamagui';
 
 const Profile = () => {
   const insets = useSafeAreaInsets();
+  const { user } = useCurrentUser();
 
   return (
     <YStack
@@ -20,7 +22,7 @@ const Profile = () => {
     >
       <YStack gap="$lg">
         <Text color={'$gray9'} fontWeight={'$600'} fontSize={'$h1'}>
-          My{'\n'}Profile 😁
+          Hi {user?.full_name?.split(' ')[0]} 👋
         </Text>
         <YStack alignItems="center">
           <YStack
