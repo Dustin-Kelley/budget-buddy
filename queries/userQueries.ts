@@ -9,7 +9,29 @@ const user = createQueryKeys('user', {
 
       if (!user || !user?.id) throw new Error('no user found');
 
-      return { user };
+      const { data: userData, error } = await supabase
+        .from('users')
+        .select('*')
+        .eq('id', user.id)
+        .single();
+
+      if (error || !userData) {
+        const userData = {
+          avatar_image: null,
+          email: user.email || null,
+          error,
+          first_name: null,
+          id: user.id,
+          initials: null,
+          isIndividual: false,
+          last_name: null,
+          phone: user.phone || null,
+        };
+        return { userData };
+      }
+
+      return { userData };
+
     },
     queryKey: [{}],
   }),
@@ -38,7 +60,8 @@ export function useCurrentUser() {
   const { data, isPending } = useQuery(user.currentUser());
   return {
     isLoadingUser: isPending,
-    user: data?.user || null,
-    userID: data?.user?.id || '',
+    user: data?.userData || null,
+    userID: data?.userData?.id || '',
   };
 }
+

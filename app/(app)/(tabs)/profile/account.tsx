@@ -1,6 +1,7 @@
 import { Button } from '@/design-components/components/Button';
 import { TextInput } from '@/design-components/components/TextInput';
 import { useUpdateProfile } from '@/queries/useProfileMutations';
+import { useCurrentUser } from '@/queries/userQueries';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link } from 'expo-router';
 import React from 'react';
@@ -15,6 +16,9 @@ type FormData = {
 const Account = () => {
   const insets = useSafeAreaInsets();
   const { updateProfile } = useUpdateProfile();
+  const {user} = useCurrentUser();
+
+  console.log('user', user)
 
   const {
     control,
@@ -25,6 +29,8 @@ const Account = () => {
       fullName: '',
     },
   });
+
+
   const onSubmit = handleSubmit(({ fullName }) => {
     updateProfile({ fullName });
   });
@@ -43,6 +49,26 @@ const Account = () => {
         <Text fontWeight={'$600'} fontSize={'$h2'}>
           My Account 😁
         </Text>
+
+        <YStack alignItems="center">
+          <YStack
+            alignItems="center"
+            justifyContent="center"
+            borderRadius={80}
+            borderWidth={6}
+            borderColor={'$purple1'}
+            height={150}
+            width={150}
+          >
+            <YStack
+              borderRadius={60}
+              height={120}
+              width={120}
+              backgroundColor={'$gray6'}
+            ></YStack>
+          </YStack>
+          <Ionicons size={24}  name="camera-outline"  />
+        </YStack>
 
         <YStack gap="$xs">
           <Controller

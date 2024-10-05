@@ -7,32 +7,54 @@ export type Json =
   | Json[]
 
 export type Database = {
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          operationName?: string
+          query?: string
+          variables?: Json
+          extensions?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
   public: {
     Tables: {
       users: {
         Row: {
           avatar_url: string | null
+          created_at: string | null
+          email: string | null
           full_name: string | null
           id: string
-          updated_at: string | null
-          username: string | null
-          website: string | null
         }
         Insert: {
           avatar_url?: string | null
+          created_at?: string | null
+          email?: string | null
           full_name?: string | null
           id: string
-          updated_at?: string | null
-          username?: string | null
-          website?: string | null
         }
         Update: {
           avatar_url?: string | null
+          created_at?: string | null
+          email?: string | null
           full_name?: string | null
           id?: string
-          updated_at?: string | null
-          username?: string | null
-          website?: string | null
         }
         Relationships: [
           {
