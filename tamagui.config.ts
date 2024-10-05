@@ -4,8 +4,7 @@ import {
   bodyFont,
   digitalFont,
   headingFont,
-  palmerLakeFont,
-  staatlichesFont,
+ 
 } from './design-components/fonts';
 import { themes } from './design-components/themes';
 import { tokens } from './design-components/tokens';
@@ -16,8 +15,7 @@ const config = createTamagui({
     body: bodyFont,
     digital: digitalFont,
     heading: headingFont,
-    palmerLake: palmerLakeFont,
-    staatliches: staatlichesFont,
+
   },
   shorthands: {
     f: 'flex',
