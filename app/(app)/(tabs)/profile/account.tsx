@@ -1,13 +1,17 @@
 import { Button } from '@/design-components/components/Button';
 import { TextInput } from '@/design-components/components/TextInput';
+import { supabase } from '@/lib/supabase';
 import { useUpdateProfile } from '@/queries/useProfileMutations';
 import { useCurrentUser } from '@/queries/userQueries';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link, router } from 'expo-router';
-import React from 'react';
+
 import { Controller, useForm } from 'react-hook-form';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { YStack, Text } from 'tamagui';
+import { YStack, Text, Image } from 'tamagui';
+import React, { useState } from 'react';
+
+import * as ImagePicker from 'expo-image-picker';
 
 type FormData = {
   fullName: string;
@@ -17,6 +21,46 @@ const Account = () => {
   const insets = useSafeAreaInsets();
   const { updateProfile } = useUpdateProfile();
   const {user} = useCurrentUser();
+
+  const [image, setImage] = useState<string | null>(null);
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
+    }
+  };
+
+  const uploadImage = async () => {
+    if (!image) return;
+
+    try {
+      const fileExt = image.split('.').pop();
+      const fileName = `${Math.random()}.${fileExt}`;
+      const filePath = `${fileName}`;
+
+      let { error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(filePath, image
+         
+        );
+
+      if (uploadError) {
+        throw uploadError;
+      }
+
+      alert('Image uploaded successfully!');
+    } catch (error) {
+      console.error('Error uploading image: ', error);
+      alert('Error uploading image');
+    }
+  };
 
 
   const {
@@ -49,6 +93,10 @@ const Account = () => {
         <Text fontWeight={'$600'} fontSize={'$h2'}>
           My Account 😁
         </Text>
+
+        <Button onPress={pickImage}><Button.Text>Upload Image</Button.Text></Button>
+      {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+      <Button onPress={uploadImage} ><Button.Text>take Image</Button.Text></Button>
 
         <YStack alignItems="center">
           <YStack
