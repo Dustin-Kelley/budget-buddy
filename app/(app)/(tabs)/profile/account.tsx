@@ -1,17 +1,16 @@
 import { Button } from '@/design-components/components/Button';
 import { TextInput } from '@/design-components/components/TextInput';
-import { supabase } from '@/lib/supabase';
 import { useUpdateProfile } from '@/queries/useProfileMutations';
 import { useCurrentUser } from '@/queries/userQueries';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link, router } from 'expo-router';
-
 import { Controller, useForm } from 'react-hook-form';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { YStack, Text, Image } from 'tamagui';
+import { YStack, Text } from 'tamagui';
 import React, { useState } from 'react';
 
-import * as ImagePicker from 'expo-image-picker';
+
+import Avatar from './components/Avatar';
 
 type FormData = {
   fullName: string;
@@ -20,48 +19,8 @@ type FormData = {
 const Account = () => {
   const insets = useSafeAreaInsets();
   const { updateProfile } = useUpdateProfile();
-  const {user} = useCurrentUser();
-
-  const [image, setImage] = useState<string | null>(null);
-
-  const pickImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
-
-    if (!result.canceled) {
-      setImage(result.assets[0].uri);
-    }
-  };
-
-  const uploadImage = async () => {
-    if (!image) return;
-
-    try {
-      const fileExt = image.split('.').pop();
-      const fileName = `${Math.random()}.${fileExt}`;
-      const filePath = `${fileName}`;
-
-      let { error: uploadError } = await supabase.storage
-        .from('avatars')
-        .upload(filePath, image
-         
-        );
-
-      if (uploadError) {
-        throw uploadError;
-      }
-
-      alert('Image uploaded successfully!');
-    } catch (error) {
-      console.error('Error uploading image: ', error);
-      alert('Error uploading image');
-    }
-  };
-
+  const { user } = useCurrentUser();
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
 
   const {
     control,
@@ -72,7 +31,6 @@ const Account = () => {
       fullName: user?.full_name || '',
     },
   });
-
 
   const onSubmit = handleSubmit(({ fullName }) => {
     updateProfile({ fullName });
@@ -88,35 +46,22 @@ const Account = () => {
     >
       <YStack gap="$sm">
         <Link href="/(app)/(tabs)/profile/profile">
-          <Ionicons size={24}  name="arrow-back-outline"  />
+          <Ionicons size={24} name="arrow-back-outline" />
         </Link>
         <Text fontWeight={'$600'} fontSize={'$h2'}>
           My Account 😁
         </Text>
 
-        <Button onPress={pickImage}><Button.Text>Upload Image</Button.Text></Button>
-      {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
-      <Button onPress={uploadImage} ><Button.Text>take Image</Button.Text></Button>
-
-        <YStack alignItems="center">
-          <YStack
-            alignItems="center"
-            justifyContent="center"
-            borderRadius={80}
-            borderWidth={6}
-            borderColor={'$purple1'}
-            height={150}
-            width={150}
-          >
-            <YStack
-              borderRadius={60}
-              height={120}
-              width={120}
-              backgroundColor={'$gray6'}
-            ></YStack>
-          </YStack>
-          <Ionicons size={24}  name="camera-outline"  />
-        </YStack>
+        <Avatar
+          setAvatarUrl={setAvatarUrl}
+          avatarUrl={avatarUrl}
+          size={200}
+          url={avatarUrl}
+          onUpload={(url: string) => {
+            setAvatarUrl(url);
+            //  updateProfile({ username, website, avatar_url: url })
+          }}
+        />
 
         <YStack gap="$xs">
           <Controller
