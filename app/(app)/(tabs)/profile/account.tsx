@@ -3,7 +3,7 @@ import { TextInput } from '@/design-components/components/TextInput';
 import { useUpdateProfile } from '@/queries/useProfileMutations';
 import { useCurrentUser } from '@/queries/userQueries';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -18,7 +18,6 @@ const Account = () => {
   const { updateProfile } = useUpdateProfile();
   const {user} = useCurrentUser();
 
-  console.log('user', user)
 
   const {
     control,
@@ -26,13 +25,14 @@ const Account = () => {
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      fullName: '',
+      fullName: user?.full_name || '',
     },
   });
 
 
   const onSubmit = handleSubmit(({ fullName }) => {
     updateProfile({ fullName });
+    router.navigate('/(app)/(tabs)/profile/profile');
   });
 
   return (
@@ -80,7 +80,7 @@ const Account = () => {
               <TextInput
                 onChangeText={onChange}
                 value={value}
-                placeholder="jon@gmail.com"
+                placeholder="John Doe"
                 label="Full Name"
               />
             )}

@@ -15,13 +15,13 @@ const Profile = () => {
   return (
     <YStack
       gap="$xs"
-      paddingTop={insets.top + 10}
+      paddingTop={insets.top + 15}
       flexGrow={1}
       paddingHorizontal="$md"
       justifyContent="space-between"
     >
       <YStack gap="$lg">
-        <Text color={'$gray9'} fontWeight={'$600'} fontSize={'$h1'}>
+        <Text color={'$gray9'} fontWeight={'$600'} fontSize={'$h2'}>
           Hi {user?.full_name?.split(' ')[0]} 👋
         </Text>
         <YStack alignItems="center">
@@ -49,7 +49,7 @@ const Profile = () => {
           borderRadius={'$xl'}
           paddingHorizontal="$md"
         >
-          <Link href="/(tabs)/profile/account">
+          <Link   href="/(tabs)/profile/account">
             <XStack gap="$sm" alignItems="center">
               <Ionicons
                 size={24}

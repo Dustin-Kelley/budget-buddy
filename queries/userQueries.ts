@@ -1,6 +1,6 @@
 import { supabase } from '@/lib/supabase';
 import { createQueryKeys } from '@lukemorales/query-key-factory';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 
 const user = createQueryKeys('user', {
   currentUser: () => ({
@@ -57,5 +57,16 @@ export function useCurrentUser() {
     isLoadingUser: isPending,
     user: data?.userData || null,
     userID: data?.userData?.id || '',
+  };
+}
+
+export function useInvalidateCurrentUser() {
+  const queryClient = useQueryClient();
+
+  return {
+    invalidateCurrentUser: () =>
+      queryClient.invalidateQueries({
+        queryKey: user.currentUser._def
+      }),
   };
 }
